@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">basicchat</string>
+    <string name="organizer">Organizer</string>
+    <string name="wetter">Wetter</string>
+    <string name="rezepte">Rezepte</string>
+    <string name="background">Background</string>
+    <string name="kalenderimage">kalenderImage</string>
+    <string name="wetterimage">Wetterimage</string>
+    <string name="rezeptimage">Rezeptimage</string>
+    <string name="kalender">Kalender</string>
+    <string name="background_second">background_second</string>
+    <string name="wecker">Wecker</string>
+    <string name="kalendericon">Kalendericon</string>
+    <string name="notizen">Notizen</string>
+    <string name="notizicon">Notizicon</string>
+    <string name="organizer1">Organizer</string>
+    <string name="textorganizer">textorganizer</string>
+    <string name="weckericon">weckericon</string>
+    <string name="backgroundweckerscreen">backgroundweckerscreen</string>
+</resources>

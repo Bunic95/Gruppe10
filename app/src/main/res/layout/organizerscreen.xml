@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/background_second"
+        android:layout_width="1169dp"
+        android:layout_height="783dp"
+        android:contentDescription="@string/background_second"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/_790679_simple_wallpapers" />
+
+    <Button
+        android:id="@+id/but_wecker1"
+        android:layout_width="232dp"
+        android:layout_height="103dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="120dp"
+        android:backgroundTint="#437C83"
+        android:fontFamily="@font/aldrich"
+        android:text="@string/wecker"
+        android:textColor="#F8F7F7"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="99dp"
+        android:layout_height="99dp"
+        android:contentDescription="@string/kalendericon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/calendar__v1" />
+
+    <Button
+        android:id="@+id/but_notizen1"
+        android:layout_width="232dp"
+        android:layout_height="103dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="200dp"
+        android:backgroundTint="#437C83"
+        android:fontFamily="@font/aldrich"
+        android:text="@string/notizen"
+        android:textColor="#F8F7F7"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="175dp"
+        android:layout_height="173dp"
+        android:contentDescription="@string/notizicon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/but_notizen1"
+        app:layout_constraintStart_toStartOf="@+id/but_notizen1"
+        app:layout_constraintTop_toBottomOf="@+id/but_notizen1"
+        app:srcCompat="@drawable/_0507" />
+
+    <TextView
+        android:id="@+id/txt_organizerscreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:contentDescription="organizertext"
+        android:fontFamily="@font/aldrich"
+        android:text="Organizer"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="172dp"
+        android:layout_height="165dp"
+        android:contentDescription="@string/weckericon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/but_wecker1"
+        app:layout_constraintStart_toStartOf="@+id/but_wecker1"
+        app:layout_constraintTop_toBottomOf="@+id/but_wecker1"
+        app:srcCompat="@drawable/alarm_clock" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
