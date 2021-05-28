@@ -5,16 +5,18 @@ u:(~Hallo)
     $speech = "Hallo Mensch wie geht es dir?" #Hierdurch wird die Nachricht innerhalb "" auf dem Display angezeigt
     Hallo Mensch, wie geht es dir?
 ^execute(raiseLeftHand)
-u1:(Gut)
-$speech = "Das freut mich sehr! Wie kann ich dir etwas gutes tun? Wähle eine Funktion auf meinem Display!"
-Das freut mich sehr! Wie kann ich dir etwas gutes tun? Wähle eine Funktion auf meinem Display!
-^endDiscuss(Decision)
-u1:([schlecht "geht so" "nicht so gut" "nicht besonders gut"])
-Oh... Das ist aber schade!Wie kann ich dir etwas gutes tun? Wähle eine Funktion auf meinem Display!
-^endDiscuss(Decision)
-
+    u1:(Gut)
+    $speech = "Das freut mich sehr! Wie kann ich dir etwas Gutes tun? Wenn du möchtest kann ich dir Notizen machen oder einen Wecker erstellen. Dir Auskunft über das Wetter geben, oder dir tolle Rezepte anzeigen. Ansonsten Frage mich doch nach einem Witz, Fußballfakt oder Zungenbrecher."
+    Das freut mich sehr! Wie kann ich dir etwas Gutes tun? Wenn du möchtest kann ich dir Notizen machen oder einen Wecker erstellen. Dir Auskunft über das Wetter geben, oder dir tolle Rezepte anzeigen. Ansonsten Frage mich doch nach einem Witz, Fußballfakt oder Zungenbrecher.
+^endDiscuss(EndFirstDecision) #beendet Gesprächsverlauf und springt zur nächsten Aktivität
+    u1:([schlecht "geht so" "nicht so gut" "nicht besonders gut"])
+    $speech = "Oh... Das ist aber schade! Wie kann ich dir etwas Gutes tun? Wenn du möchtest kann ich dir Notizen machen oder einen Wecker erstellen. Dir Auskunft über das Wetter geben, oder dir tolle Rezepte anzeigen. Ansonsten Frage mich doch nach einem Witz, Fußballfakt oder Zungenbrecher."
+    Oh... Das ist aber schade! Wie kann ich dir etwas Gutes tun? Wenn du möchtest kann ich dir Notizen machen oder einen Wecker erstellen. Dir Auskunft über das Wetter geben, oder dir tolle Rezepte anzeigen. Ansonsten Frage mich doch nach einem Witz, Fußballfakt oder Zungenbrecher.
+^endDiscuss(EndFirstDecision)
 #Hier aus dieser activity rausgehen und neue starten
-#Hier die Funktionen (Organizer, Rezepte, Wetter) noch ergänzen
+
+
+
 #u:([Organizer Wecker Termin Kalender Notizen Erinnerung]) Welche der Funktionen möchtest du im Organizer öffnen? Diese werden nun auf dem Tablet angezeigt!
 #u1:(Wecker) möchtest du einen neuen Wecker stellen oder einen vorhandenen Löschen?
 #u2:(Wecker löschen) welchen der Wecker möchtest du löschen. nenne mir die Zahl die links neben dem Wecker steht!

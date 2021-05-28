@@ -18,8 +18,9 @@
 
     <TextView
         android:id="@+id/tabletlabel"
-        android:layout_width="636dp"
-        android:layout_height="192dp"
+        android:layout_width="883dp"
+        android:layout_height="593dp"
+        android:fontFamily="@font/aldrich"
         android:gravity="center"
         android:textColor="#000000"
         android:textSize="30sp"

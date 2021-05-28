@@ -43,7 +43,7 @@
         app:srcCompat="@drawable/calendar__v1" />
 
     <Button
-        android:id="@+id/wetter"
+        android:id="@+id/but_wetter"
         android:layout_width="232dp"
         android:layout_height="103dp"
         android:layout_marginTop="120dp"
@@ -52,12 +52,12 @@
         android:text="@string/wetter"
         android:textColor="#F8F7F7"
         android:textSize="30sp"
-        app:layout_constraintEnd_toStartOf="@+id/rezepte"
+        app:layout_constraintEnd_toStartOf="@+id/but_rezepte"
         app:layout_constraintStart_toEndOf="@+id/but_organizer"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/rezepte"
+        android:id="@+id/but_rezepte"
         android:layout_width="232dp"
         android:layout_height="103dp"
         android:layout_marginTop="120dp"
@@ -76,9 +76,9 @@
         android:layout_height="142dp"
         android:contentDescription="@string/wetterimage"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/wetter"
-        app:layout_constraintStart_toStartOf="@+id/wetter"
-        app:layout_constraintTop_toBottomOf="@+id/wetter"
+        app:layout_constraintEnd_toEndOf="@+id/but_wetter"
+        app:layout_constraintStart_toStartOf="@+id/but_wetter"
+        app:layout_constraintTop_toBottomOf="@+id/but_wetter"
         app:srcCompat="@drawable/pngfind_com_weather_icon_png_2733257" />
 
     <ImageView
@@ -87,9 +87,9 @@
         android:layout_height="138dp"
         android:contentDescription="@string/rezeptimage"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/rezepte"
-        app:layout_constraintStart_toStartOf="@+id/rezepte"
-        app:layout_constraintTop_toBottomOf="@+id/rezepte"
+        app:layout_constraintEnd_toEndOf="@+id/but_rezepte"
+        app:layout_constraintStart_toStartOf="@+id/but_rezepte"
+        app:layout_constraintTop_toBottomOf="@+id/but_rezepte"
         app:srcCompat="@drawable/daco_1775891" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

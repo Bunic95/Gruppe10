@@ -17,12 +17,12 @@ import com.aldebaran.qi.sdk.builder.SayBuilder
 import com.aldebaran.qi.sdk.builder.TopicBuilder
 import com.aldebaran.qi.sdk.design.activity.RobotActivity
 
-private const val TAG = "MainActivity"
+private const val TAG = "MainActivity" //Wird verwendet um wieder in Main activity zu springen?
 
 class MainActivity : RobotActivity(), RobotLifecycleCallbacks { // robotactivity ist eine activity und muss im Manifest verankert sein und benötigt Klammern ()
     override fun onCreate(savedInstanceState: Bundle?) { //OnCreate ist eine von Android benötigte function um bspw. das Layout aufzurufen.
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.speechscreen)
+        setContentView(R.layout.speechscreen) // setContentView zeigt das layout "speechscreen)
         QiSDK.register(this, this)
     }
 
@@ -51,16 +51,16 @@ class MainActivity : RobotActivity(), RobotLifecycleCallbacks { // robotactivity
 //Chat erstellen
         val chat = ChatBuilder.with(qiContext).withChatbot(qiChatbot).withLocale(locale).build()
 // Ausführen des Chats
-        val fchat: Future<Void> = chat.async().run()
+        val fchat: Future<Void> = chat.async().run() // future void wird benötigt um den Chat abbrechbar zu machen
 
         // Chat stoppen wenn qichatbot fertig ist. Hier kann dann in andere topic gesprungen werden.
         qiChatbot.addOnEndedListener { endReason ->
             Log.i(TAG, "qichatbot end reason = $endReason")
             fchat.requestCancellation()
-            goToDecision()
+            goToDecision() //Hier wird in andere Activity gewechselt
         }
     }
-//Activity "DecisionActivity" wird gestartet und somit wird layout "activity_main" aktiviert
+//Activity "DecisionActivity" wird gestartet und somit wird layout "activity_main" aktiviert (Kann hier platziert werden oder iwo ganz unten)
     private fun goToDecision() {
         val changeToDecision = Intent(this, DecisionActivity::class.java)
         startActivity(changeToDecision)
