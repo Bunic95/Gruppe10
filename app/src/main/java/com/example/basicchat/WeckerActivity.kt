@@ -1,6 +1,9 @@
 package com.example.basicchat
 
+import android.content.Intent
 import android.os.Bundle
+import android.provider.AlarmClock
+import android.widget.Button
 import android.widget.TextView
 import com.aldebaran.qi.sdk.QiContext
 import com.aldebaran.qi.sdk.QiSDK
@@ -14,7 +17,19 @@ class WeckerActivity : RobotActivity(), RobotLifecycleCallbacks {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.weckerscreen)
         QiSDK.register(this, this)
+        val but_weckersetzen: Button =
+            findViewById(R.id.but_weckersetzen)
 
+        but_weckersetzen.setOnClickListener {
+
+            val intent = Intent(AlarmClock.ACTION_SET_ALARM)
+            intent.putExtra(AlarmClock.EXTRA_MESSAGE, "Neuer Wecker")
+            intent.putExtra(AlarmClock.EXTRA_HOUR, 10)
+            intent.putExtra(AlarmClock.EXTRA_MINUTES, 32)
+            intent.putExtra(AlarmClock.EXTRA_DAYS, arrayListOf(2, 3, 4))
+            startActivity(intent)
+        }
+        //LIVE UHRZEIT IWIE REALISIEREN DAMIT DIESE MIT LÄUFT!!!
         val kalender: Calendar = Calendar.getInstance()
         val zeitformat = SimpleDateFormat("HH:mm")
         val txt_zeitaktuell: TextView = findViewById(R.id.txt_zeitaktuell)
