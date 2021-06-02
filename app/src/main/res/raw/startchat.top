@@ -1,4 +1,4 @@
-topic: ~organizer()
+topic: ~startchat()
 # Smalltalk
 concept:(Hallo)[Hallo hey hi hello Servus Salli Salut "Hallo Pepper"]
 u:(~Hallo)

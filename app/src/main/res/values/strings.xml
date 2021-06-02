@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">basicchat</string>
-    <string name="organizer">Organizer</string>
+    <string name="organizer1">Organizer</string>
     <string name="wetter">Wetter</string>
     <string name="rezepte">Rezepte</string>
     <string name="background">Background</string>
@@ -11,11 +11,27 @@
     <string name="background_second">background_second</string>
     <string name="wecker">Wecker</string>
     <string name="kalendericon">Kalendericon</string>
-    <string name="notizen">Notizen</string>
+    <string name="notizen1">Notizen</string>
     <string name="notizicon">Notizicon</string>
-    <string name="organizer1">Organizer</string>
+    <string name="organizer2">Organizer</string>
     <string name="textorganizer">textorganizer</string>
     <string name="weckericon">weckericon</string>
     <string name="backgroundweckerscreen">backgroundweckerscreen</string>
     <string name="backgroundwetterscreen">backgroundwetterscreen</string>
+    <string name="notizenscreentext">Notizenscreentext</string>
+    <string name="notizenscreenicon">Notizenscreenicon</string>
+    <string name="notize2n">Notizen</string>
+    <string name="im_weckericon">im_weckericon</string>
+    <string name="weckerscreentext">weckerscreentext</string>
+    <string name="wecker2">Wecker</string>
+    <string name="organizertext">organizertext</string>
+    <string name="organizer">Organizer</string>
+    <string name="notizen">Notizen</string>
+    <string name="notizen_hier_eintragen">Notizen hier eintragen</string>
+    <string name="hier_notiz_eintragen">Hier Notiz eintragen</string>
+    <string name="speichern">Speichern</string>
+    <string name="hier_notiz_eintragen_oder_berschreiben">Hier Notiz eintragen oder überschreiben</string>
+    <string name="hier_notiz_eintragen_oder_berschreiben2">Hier Notiz eintragen oder überschreiben</string>
+    <string name="hier_notiz_eintragen_oder_berschreiben3">Hier Notiz eintragen oder überschreiben</string>
+    <string name="hier_notiz_eintragen_oder_berschreiben4">Hier Notiz eintragen oder überschreiben</string>
 </resources>

@@ -36,7 +36,7 @@ class DecisionActivity : RobotActivity(), RobotLifecycleCallbacks {
         val chat = ChatBuilder.with(qiContext).withChatbot(qiChatbot).withLocale(locale).build()
         // Ausführen des Chats
         val fchat: Future<Void> = chat.async().run() // future void wird benötigt um den Chat abbrechbar zu machen
-        //Ab hier alter code
+        //Ab hier einbinden der Buttons
         val but_organizer: Button = findViewById(R.id.but_organizer) //Button wird als variable deklariert
         but_organizer.setOnClickListener {
             //Hier den chat smalltalk nach Button betätigung beenden und danach mit thread in nächsten chat wechseln

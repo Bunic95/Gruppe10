@@ -34,8 +34,8 @@ class MainActivity : RobotActivity(), RobotLifecycleCallbacks { // robotactivity
         say.run() //Say function ausführen
     //Festlegen der Sprache des Roboters//
         val locale = com.aldebaran.qi.sdk.`object`.locale.Locale(Language.GERMAN, Region.GERMANY)
-    //Einbinden der zuvor erstellen Topic "organizer.top"
-        val topic = TopicBuilder.with(qiContext).withResource(R.raw.organizer).build() //erstellen der variable "topic" + bilden der topic
+    //Einbinden der zuvor erstellen Topic "startchat.top.top"
+        val topic = TopicBuilder.with(qiContext).withResource(R.raw.startchat).build() //erstellen der variable "topic" + bilden der topic
     //Erstellen eines qiChatbots mittels Chatbotbilder und unter Einbeziehung der Spracheinstellungen
         val qiChatbot = QiChatbotBuilder.with(qiContext).withTopic(topic).withLocale(locale).build()
         qiChatbot.variable("speech").addOnValueChangedListener {

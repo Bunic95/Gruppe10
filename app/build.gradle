@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
 }
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 30
@@ -44,4 +45,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 	implementation 'com.aldebaran:qisdk:1.7.5'
 	implementation 'com.aldebaran:qisdk-design:1.7.5'
+
 }

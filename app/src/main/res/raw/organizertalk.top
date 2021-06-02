@@ -1,0 +1,9 @@
+topic: ~organizertalk()
+# Defining extra concepts out of words or group of words
+concept:(hello) [hello hi hey "good morning" greetings]
+
+# Replying to speech
+u:(~hello) ~hello
+
+#HIER GESPRÄCHE EINFÜGEN DIE VOR BEGIN DER WECKER UND NOTIZEN FUNKTIONEN STATTFINDEN KÖNNEN
+#BPW. PEPPER ERKLÄRT WAS PERSONA HIER MACHEN KANN UND RANDOM TALK (EVTL SCHLAFTIPPS ODER RÄTSEL ETC.) UND BEWEGUNGEN (TANZEN ODER SOWAS)
