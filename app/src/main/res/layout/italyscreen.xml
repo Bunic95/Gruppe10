@@ -31,7 +31,7 @@
         app:srcCompat="@drawable/_790679_simple_wallpapers" />
 
     <Button
-        android:id="@+id/but_d_rezept4"
+        android:id="@+id/but_risotto"
         android:layout_width="232dp"
         android:layout_height="103dp"
         android:layout_marginStart="180dp"
@@ -44,7 +44,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/but_d_rezept5"
+        android:id="@+id/but_calamari"
         android:layout_width="232dp"
         android:layout_height="103dp"
         android:layout_marginTop="160dp"
@@ -67,20 +67,20 @@
 
     <ImageView
         android:id="@+id/imageView25"
-        android:layout_width="326dp"
-        android:layout_height="207dp"
+        android:layout_width="314dp"
+        android:layout_height="199dp"
         android:layout_marginTop="25dp"
-        app:layout_constraintEnd_toEndOf="@+id/but_d_rezept5"
-        app:layout_constraintStart_toStartOf="@+id/but_d_rezept5"
-        app:layout_constraintTop_toBottomOf="@+id/but_d_rezept5"
+        app:layout_constraintEnd_toEndOf="@+id/but_calamari"
+        app:layout_constraintStart_toStartOf="@+id/but_calamari"
+        app:layout_constraintTop_toBottomOf="@+id/but_calamari"
         app:srcCompat="@drawable/calamari" />
 
     <ImageView
         android:id="@+id/imageView26"
         android:layout_width="347dp"
         android:layout_height="253dp"
-        app:layout_constraintEnd_toEndOf="@+id/but_d_rezept4"
-        app:layout_constraintStart_toStartOf="@+id/but_d_rezept4"
-        app:layout_constraintTop_toBottomOf="@+id/but_d_rezept4"
+        app:layout_constraintEnd_toEndOf="@+id/but_risotto"
+        app:layout_constraintStart_toStartOf="@+id/but_risotto"
+        app:layout_constraintTop_toBottomOf="@+id/but_risotto"
         app:srcCompat="@drawable/risottomilanese" />
 </androidx.constraintlayout.widget.ConstraintLayout>

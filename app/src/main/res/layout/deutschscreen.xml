@@ -31,7 +31,7 @@
         app:srcCompat="@drawable/_790679_simple_wallpapers" />
 
     <Button
-        android:id="@+id/but_d_rezept1"
+        android:id="@+id/but_eintopf"
         android:layout_width="wrap_content"
         android:layout_height="103dp"
         android:layout_marginStart="120dp"
@@ -44,7 +44,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/but_d_rezept2"
+        android:id="@+id/but_klopse"
         android:layout_width="wrap_content"
         android:layout_height="103dp"
         android:layout_marginTop="160dp"
@@ -70,9 +70,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        app:layout_constraintEnd_toEndOf="@+id/but_d_rezept1"
-        app:layout_constraintStart_toStartOf="@+id/but_d_rezept1"
-        app:layout_constraintTop_toBottomOf="@+id/but_d_rezept1"
+        app:layout_constraintEnd_toEndOf="@+id/but_eintopf"
+        app:layout_constraintStart_toStartOf="@+id/but_eintopf"
+        app:layout_constraintTop_toBottomOf="@+id/but_eintopf"
         app:srcCompat="@drawable/erbseneintorpr" />
 
     <ImageView
@@ -80,9 +80,9 @@
         android:layout_width="341dp"
         android:layout_height="228dp"
         android:layout_marginTop="10dp"
-        app:layout_constraintEnd_toEndOf="@+id/but_d_rezept2"
-        app:layout_constraintStart_toStartOf="@+id/but_d_rezept2"
-        app:layout_constraintTop_toBottomOf="@+id/but_d_rezept2"
+        app:layout_constraintEnd_toEndOf="@+id/but_klopse"
+        app:layout_constraintStart_toStartOf="@+id/but_klopse"
+        app:layout_constraintTop_toBottomOf="@+id/but_klopse"
         app:srcCompat="@drawable/koenigsbergerklopse" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

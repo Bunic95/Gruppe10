@@ -55,4 +55,10 @@
     <string name="zur_ck">Zurück</string>
     <string name="zur_ck2">Zurück</string>
     <string name="rezept1i">Rezept1i</string>
+    <string name="zur_ck3">Zurück</string>
+    <string name="gyros">Gyros</string>
+    <string name="kritharaki_salat">Kritharaki Salat</string>
+    <string name="flaggegriech">flaggegriech</string>
+    <string name="bildgyros">bildgyros</string>
+    <string name="bildsalat">bildsalat</string>
 </resources>

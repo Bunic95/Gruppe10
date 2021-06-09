@@ -21,6 +21,18 @@ class deutschactivity : RobotActivity(), RobotLifecycleCallbacks {
             val intent = Intent(this, RezeptActivity::class.java)
             startActivity(intent)
         }
+        val but_klopse: Button = findViewById(R.id.but_klopse) //Button wird als variable deklariert
+        but_klopse.setOnClickListener {
+           // fchat.requestCancellation() //ACHTUNG DIES NOCH EINÜGEN WENN CHAT EINGEFÜGT IST
+            goToKlopse()
+            //thread {  }
+        }
+        val but_eintopf: Button = findViewById(R.id.but_eintopf) //Button wird als variable deklariert
+        but_eintopf.setOnClickListener {
+            // fchat.requestCancellation() //ACHTUNG DIES NOCH EINÜGEN WENN CHAT EINGEFÜGT IST
+            goToEintopf()
+            //thread {  }
+        }
     }
 
         override fun onRobotFocusGained(qiContext: QiContext?) {
@@ -34,5 +46,13 @@ class deutschactivity : RobotActivity(), RobotLifecycleCallbacks {
         override fun onRobotFocusRefused(reason: String?) {
             TODO("Not yet implemented")
         }
+    private fun goToKlopse() {
+        val changeToKlopse = Intent(this, KlopseActivity::class.java)
+        startActivity(changeToKlopse)
+    }
+    private fun goToEintopf() {
+        val changeToEintopf = Intent(this, EintopfActivity::class.java)
+        startActivity(changeToEintopf)
+    }
 
     }

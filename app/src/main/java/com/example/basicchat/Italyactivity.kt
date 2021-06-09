@@ -20,6 +20,18 @@ class Italyactivity : RobotActivity(), RobotLifecycleCallbacks {
             val intent = Intent(this, RezeptActivity::class.java)
             startActivity(intent)
         }
+        val but_risotto: Button = findViewById(R.id.but_risotto) //Button wird als variable deklariert
+        but_risotto.setOnClickListener {
+            // fchat.requestCancellation() //ACHTUNG DIES NOCH EINÜGEN WENN CHAT EINGEFÜGT IST
+            goToRisotto()
+            //thread {  }
+        }
+        val but_calamari: Button = findViewById(R.id.but_calamari) //Button wird als variable deklariert
+        but_calamari.setOnClickListener {
+            // fchat.requestCancellation() //ACHTUNG DIES NOCH EINÜGEN WENN CHAT EINGEFÜGT IST
+            goToCalamari()
+            //thread {  }
+        }
     }
 
     override fun onRobotFocusGained(qiContext: QiContext?) {
@@ -32,5 +44,13 @@ class Italyactivity : RobotActivity(), RobotLifecycleCallbacks {
 
     override fun onRobotFocusRefused(reason: String?) {
         TODO("Not yet implemented")
+    }
+    private fun goToRisotto() {
+        val changeToRisotto = Intent(this, RisottoActivity::class.java)
+        startActivity(changeToRisotto)
+    }
+    private fun goToCalamari() {
+        val changeToCalamari = Intent(this, CalamariActivity::class.java)
+        startActivity(changeToCalamari)
     }
 }

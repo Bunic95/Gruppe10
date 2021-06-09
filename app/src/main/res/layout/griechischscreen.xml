@@ -14,7 +14,7 @@
         android:layout_marginEnd="10dp"
         android:backgroundTint="#437C83"
         android:fontFamily="@font/aldrich"
-        android:text="Zurück"
+        android:text="@string/zur_ck3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -31,27 +31,27 @@
         app:srcCompat="@drawable/_790679_simple_wallpapers" />
 
     <Button
-        android:id="@+id/but_d_rezept3"
+        android:id="@+id/but_gyros"
         android:layout_width="232dp"
         android:layout_height="103dp"
         android:layout_marginStart="180dp"
         android:layout_marginTop="160dp"
         android:backgroundTint="#437C83"
         android:fontFamily="@font/aldrich"
-        android:text="Gyros"
+        android:text="@string/gyros"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/but_d_rezept"
+        android:id="@+id/but_salat"
         android:layout_width="232dp"
         android:layout_height="103dp"
         android:layout_marginTop="160dp"
-        android:layout_marginEnd="180dp"
+        android:layout_marginEnd="160dp"
         android:backgroundTint="#437C83"
         android:fontFamily="@font/aldrich"
-        android:text="Kritharaki Salat"
+        android:text="@string/kritharaki_salat"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -61,6 +61,7 @@
         android:layout_width="475dp"
         android:layout_height="135dp"
         android:layout_marginEnd="535dp"
+        android:contentDescription="@string/flaggegriech"
         app:layout_constraintEnd_toStartOf="@+id/but_back_griech"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/greek" />
@@ -70,9 +71,10 @@
         android:layout_width="383dp"
         android:layout_height="231dp"
         android:layout_marginTop="10dp"
-        app:layout_constraintEnd_toEndOf="@+id/but_d_rezept3"
-        app:layout_constraintStart_toStartOf="@+id/but_d_rezept3"
-        app:layout_constraintTop_toBottomOf="@+id/but_d_rezept3"
+        android:contentDescription="@string/bildgyros"
+        app:layout_constraintEnd_toEndOf="@+id/but_gyros"
+        app:layout_constraintStart_toStartOf="@+id/but_gyros"
+        app:layout_constraintTop_toBottomOf="@+id/but_gyros"
         app:srcCompat="@drawable/_600x900_griechisches_gyros" />
 
     <ImageView
@@ -80,8 +82,9 @@
         android:layout_width="424dp"
         android:layout_height="218dp"
         android:layout_marginTop="15dp"
-        app:layout_constraintEnd_toEndOf="@+id/but_d_rezept"
-        app:layout_constraintStart_toStartOf="@+id/but_d_rezept"
-        app:layout_constraintTop_toBottomOf="@+id/but_d_rezept"
+        android:contentDescription="@string/bildsalat"
+        app:layout_constraintEnd_toEndOf="@+id/but_salat"
+        app:layout_constraintStart_toStartOf="@+id/but_salat"
+        app:layout_constraintTop_toBottomOf="@+id/but_salat"
         app:srcCompat="@drawable/kritharkisalat" />
 </androidx.constraintlayout.widget.ConstraintLayout>

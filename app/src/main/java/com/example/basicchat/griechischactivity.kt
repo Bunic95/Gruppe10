@@ -20,6 +20,18 @@ class griechischactivity : RobotActivity(), RobotLifecycleCallbacks {
             val intent = Intent(this, RezeptActivity::class.java)
             startActivity(intent)
         }
+        val but_gyros: Button = findViewById(R.id.but_gyros) //Button wird als variable deklariert
+        but_gyros.setOnClickListener {
+            // fchat.requestCancellation() //ACHTUNG DIES NOCH EINÜGEN WENN CHAT EINGEFÜGT IST
+            goToGyros()
+            //thread {  }
+        }
+        val but_salat: Button = findViewById(R.id.but_salat) //Button wird als variable deklariert
+        but_salat.setOnClickListener {
+            // fchat.requestCancellation() //ACHTUNG DIES NOCH EINÜGEN WENN CHAT EINGEFÜGT IST
+            goToSalat()
+            //thread {  }
+        }
     }
 
     override fun onRobotFocusGained(qiContext: QiContext?) {
@@ -32,5 +44,13 @@ class griechischactivity : RobotActivity(), RobotLifecycleCallbacks {
 
     override fun onRobotFocusRefused(reason: String?) {
         TODO("Not yet implemented")
+    }
+    private fun goToGyros() {
+        val changeToGyros = Intent(this, GyrosActivity::class.java)
+        startActivity(changeToGyros)
+    }
+    private fun goToSalat() {
+        val changeToSalat = Intent(this, SalatActivity::class.java)
+        startActivity(changeToSalat)
     }
 }

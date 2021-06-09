@@ -20,6 +20,18 @@ class turkischactivity : RobotActivity(), RobotLifecycleCallbacks {
             val intent = Intent(this, RezeptActivity::class.java)
             startActivity(intent)
         }
+        val but_pide: Button = findViewById(R.id.but_pide) //Button wird als variable deklariert
+        but_pide.setOnClickListener {
+            // fchat.requestCancellation() //ACHTUNG DIES NOCH EINÜGEN WENN CHAT EINGEFÜGT IST
+            goToPide()
+            //thread {  }
+        }
+        val but_baklava: Button = findViewById(R.id.but_baklava) //Button wird als variable deklariert
+        but_baklava.setOnClickListener {
+            // fchat.requestCancellation() //ACHTUNG DIES NOCH EINÜGEN WENN CHAT EINGEFÜGT IST
+            goToBaklava()
+            //thread {  }
+        }
     }
 
     override fun onRobotFocusGained(qiContext: QiContext?) {
@@ -32,5 +44,13 @@ class turkischactivity : RobotActivity(), RobotLifecycleCallbacks {
 
     override fun onRobotFocusRefused(reason: String?) {
         TODO("Not yet implemented")
+    }
+    private fun goToPide() {
+        val changeToPide = Intent(this, PideActivity::class.java)
+        startActivity(changeToPide)
+    }
+    private fun goToBaklava() {
+        val changeToBaklava = Intent(this, BaklavaActivity::class.java)
+        startActivity(changeToBaklava)
     }
 }
