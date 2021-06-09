@@ -2,7 +2,7 @@
     <string name="app_name">basicchat</string>
     <string name="organizer1">Organizer</string>
     <string name="wetter">Wetter</string>
-    <string name="rezepte">Rezepte</string>
+    <string name="rezepte1">Rezepte</string>
     <string name="background">Background</string>
     <string name="kalenderimage">kalenderImage</string>
     <string name="wetterimage">Wetterimage</string>
@@ -34,4 +34,25 @@
     <string name="hier_notiz_eintragen_oder_berschreiben2">Hier Notiz eintragen oder überschreiben</string>
     <string name="hier_notiz_eintragen_oder_berschreiben3">Hier Notiz eintragen oder überschreiben</string>
     <string name="hier_notiz_eintragen_oder_berschreiben4">Hier Notiz eintragen oder überschreiben</string>
+    <string name="ackrgroundrezept">ackrgroundrezept</string>
+    <string name="rezeoticon2">rezeoticon2</string>
+    <string name="rezepte">Rezepte</string>
+    <string name="deutsch">Deutsch</string>
+    <string name="t_rkisch">Türkisch</string>
+    <string name="italienisch">Italienisch</string>
+    <string name="zuf_llig">Zufällig</string>
+    <string name="griechisch">Griechisch</string>
+    <string name="deutschflagge1">deutschflagge1</string>
+    <string name="turkyflagge">turkyflagge</string>
+    <string name="griechflagge">griechflagge</string>
+    <string name="italyflagge">italyflagge</string>
+    <string name="wuerfeln">wuerfeln</string>
+    <string name="turkflag3">turkflag3</string>
+    <string name="baklava">Baklava</string>
+    <string name="pide">Pide</string>
+    <string name="baklavabild">baklavabild</string>
+    <string name="bildpide">BildPide</string>
+    <string name="zur_ck">Zurück</string>
+    <string name="zur_ck2">Zurück</string>
+    <string name="rezept1i">Rezept1i</string>
 </resources>

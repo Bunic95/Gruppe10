@@ -1,6 +1,7 @@
 package com.example.basicchat
 
 import android.content.Context
+import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.Button
@@ -43,6 +44,13 @@ class NotizActivity : RobotActivity(), RobotLifecycleCallbacks {
             findViewById(R.id.but_speichern4) //Button wird als variable deklariert
         but_notizen4.setOnClickListener {
             saveData4()
+        }
+
+        //Button zurück zur Vorrigen Activity
+        val backButton = findViewById<Button>(R.id.but_back_notizen)
+        backButton.setOnClickListener {
+            val intent = Intent(this, OrganizerActivity::class.java)
+            startActivity(intent)
         }
 
     }

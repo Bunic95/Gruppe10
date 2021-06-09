@@ -53,6 +53,12 @@ class OrganizerActivity : RobotActivity(), RobotLifecycleCallbacks {
             goToWecker()
             //thread {  }
         }
+        //Button zurück zur Vorrigen Activity
+        val backButton = findViewById<Button>(R.id.but_back_organizer)
+        backButton.setOnClickListener {
+            val intent = Intent(this, DecisionActivity::class.java)
+            startActivity(intent)
+        }
     }
     override fun onRobotFocusLost() {
         TODO("Not yet implemented")

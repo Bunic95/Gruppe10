@@ -7,6 +7,7 @@ import com.aldebaran.qi.Future
 import com.aldebaran.qi.sdk.QiContext
 import com.aldebaran.qi.sdk.QiSDK
 import com.aldebaran.qi.sdk.RobotLifecycleCallbacks
+import com.aldebaran.qi.sdk.`object`.conversation.BookmarkStatus
 import com.aldebaran.qi.sdk.`object`.locale.Language
 import com.aldebaran.qi.sdk.`object`.locale.Region
 import com.aldebaran.qi.sdk.builder.ChatBuilder
@@ -20,6 +21,8 @@ class RezeptActivity : RobotActivity(), RobotLifecycleCallbacks {
         setContentView(R.layout.rezeptscreen)
         QiSDK.register(this, this)
     }
+
+    private var deutschBookmarkStatus: BookmarkStatus? = null
 
     //Verknüpfungen zu Buttons erstellen. Aktivitäten für jeweiliges Land erstellen und verknüpfen.
     override fun onRobotFocusGained(qiContext: QiContext?) {
@@ -58,6 +61,19 @@ class RezeptActivity : RobotActivity(), RobotLifecycleCallbacks {
             goToGriechisch()
             //thread {  }
         }
+        //Button zurück zur Vorrigen Activity
+        val backButton = findViewById<Button>(R.id.but_back_rezept)
+        backButton.setOnClickListener {
+            val intent = Intent (this, DecisionActivity::class.java)
+            startActivity(intent)
+        }
+        // Sprachaufruf zu anderer Aktivität
+        //val deutschBookmark: Bookmark? = topic.bookmarks["deutschactivity"]
+        //deutschBookmarkStatus = qiChatbot.bookmarkStatus(deutschBookmark)
+        //deutschBookmarkStatus?.addOnReachedListener {
+        //    val intent = Intent (this, deutschactivity::class.java)
+        //   startActivity(intent)
+        //}
         }
         override fun onRobotFocusLost() {
             TODO("Not yet implemented")

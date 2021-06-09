@@ -6,6 +6,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <Button
+        android:id="@+id/but_back_deutsch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:backgroundTint="#437C83"
+        android:fontFamily="@font/aldrich"
+        android:text="Zurück"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
         android:id="@+id/imageView13"
         android:layout_width="1416dp"
@@ -20,27 +32,27 @@
 
     <Button
         android:id="@+id/but_d_rezept1"
-        android:layout_width="232dp"
+        android:layout_width="wrap_content"
         android:layout_height="103dp"
-        android:layout_marginStart="200dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="160dp"
         android:backgroundTint="#437C83"
         android:fontFamily="@font/aldrich"
-        android:text="Rezept1"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Erbseineintopf"
+        android:textSize="25sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/but_d_rezept2"
-        android:layout_width="232dp"
+        android:layout_width="wrap_content"
         android:layout_height="103dp"
-        android:layout_marginEnd="200dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="100dp"
         android:backgroundTint="#437C83"
         android:fontFamily="@font/aldrich"
-        android:text="Rezept2"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Königsberger Klopse"
+        android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -52,5 +64,25 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/german" />
+
+    <ImageView
+        android:id="@+id/imageView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/but_d_rezept1"
+        app:layout_constraintStart_toStartOf="@+id/but_d_rezept1"
+        app:layout_constraintTop_toBottomOf="@+id/but_d_rezept1"
+        app:srcCompat="@drawable/erbseneintorpr" />
+
+    <ImageView
+        android:id="@+id/imageView24"
+        android:layout_width="341dp"
+        android:layout_height="228dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/but_d_rezept2"
+        app:layout_constraintStart_toStartOf="@+id/but_d_rezept2"
+        app:layout_constraintTop_toBottomOf="@+id/but_d_rezept2"
+        app:srcCompat="@drawable/koenigsbergerklopse" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

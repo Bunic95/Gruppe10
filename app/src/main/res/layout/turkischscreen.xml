@@ -6,6 +6,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <Button
+        android:id="@+id/but_back_turk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:backgroundTint="#437C83"
+        android:fontFamily="@font/aldrich"
+        android:text="Zurück"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
         android:id="@+id/imageView19"
         android:layout_width="1416dp"
@@ -23,33 +35,56 @@
         android:layout_width="473dp"
         android:layout_height="140dp"
         android:layout_marginEnd="625dp"
+        android:contentDescription="@string/turkflag3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/turky" />
 
     <Button
-        android:id="@+id/but_d_rezept6"
+        android:id="@+id/but_baklava"
         android:layout_width="232dp"
         android:layout_height="103dp"
-        android:layout_marginStart="200dp"
+        android:layout_marginStart="180dp"
+        android:layout_marginTop="160dp"
         android:backgroundTint="#437C83"
         android:fontFamily="@font/aldrich"
-        android:text="Rezept1T"
+        android:text="@string/baklava"
         android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/but_d_rezept7"
+        android:id="@+id/but_Pide"
         android:layout_width="232dp"
         android:layout_height="103dp"
-        android:layout_marginEnd="200dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="180dp"
         android:backgroundTint="#437C83"
         android:fontFamily="@font/aldrich"
-        android:text="Rezept2T"
+        android:text="@string/pide"
         android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView21"
+        android:layout_width="416dp"
+        android:layout_height="217dp"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@string/baklavabild"
+        app:layout_constraintEnd_toEndOf="@+id/but_baklava"
+        app:layout_constraintStart_toStartOf="@+id/but_baklava"
+        app:layout_constraintTop_toBottomOf="@+id/but_baklava"
+        app:srcCompat="@drawable/baklava" />
+
+    <ImageView
+        android:id="@+id/imageView22"
+        android:layout_width="337dp"
+        android:layout_height="218dp"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@string/bildpide"
+        app:layout_constraintEnd_toEndOf="@+id/but_Pide"
+        app:layout_constraintStart_toStartOf="@+id/but_Pide"
+        app:layout_constraintTop_toBottomOf="@+id/but_Pide"
+        app:srcCompat="@drawable/bcc8c927_7512_48d5_806e_dac04f7c8546" />
 </androidx.constraintlayout.widget.ConstraintLayout>

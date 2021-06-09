@@ -1,6 +1,8 @@
 package com.example.basicchat
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import com.aldebaran.qi.sdk.QiContext
 import com.aldebaran.qi.sdk.QiSDK
 import com.aldebaran.qi.sdk.RobotLifecycleCallbacks
@@ -11,6 +13,13 @@ class griechischactivity : RobotActivity(), RobotLifecycleCallbacks {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.griechischscreen)
         QiSDK.register(this, this)
+
+        //Button zurück zur Vorrigen Activity
+        val backButton = findViewById<Button>(R.id.but_back_griech)
+        backButton.setOnClickListener {
+            val intent = Intent(this, RezeptActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun onRobotFocusGained(qiContext: QiContext?) {

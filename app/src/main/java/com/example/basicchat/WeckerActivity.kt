@@ -34,13 +34,16 @@ class WeckerActivity : RobotActivity(), RobotLifecycleCallbacks {
         val zeitformat = SimpleDateFormat("HH:mm")
         val txt_zeitaktuell: TextView = findViewById(R.id.txt_zeitaktuell)
         txt_zeitaktuell.setText(zeitformat.format(kalender.getTime()))
-
-
-        //https://www.youtube.com/watch?v=xJr7N6bSPLc&ab_channel=derAndroidPro (Time und Date Picker)
-
         val datumsformat = SimpleDateFormat("dd.MM.yyyy")
         val txt_datumaktuell: TextView = findViewById(R.id.txt_datumaktuell)
         txt_datumaktuell.setText(datumsformat.format(kalender.time))
+
+        //Button zurück zur Vorrigen Activity
+        val backButton = findViewById<Button>(R.id.but_back_wecker)
+        backButton.setOnClickListener {
+            val intent = Intent(this, OrganizerActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun onRobotFocusGained(qiContext: QiContext?) {

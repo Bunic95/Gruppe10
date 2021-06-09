@@ -1,6 +1,8 @@
 package com.example.basicchat
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import com.aldebaran.qi.sdk.QiContext
 import com.aldebaran.qi.sdk.QiSDK
 import com.aldebaran.qi.sdk.RobotLifecycleCallbacks
@@ -11,18 +13,26 @@ class deutschactivity : RobotActivity(), RobotLifecycleCallbacks {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.deutschscreen)
         QiSDK.register(this, this)
+
+
+        //Button zurück zur Vorrigen Activity
+        val backButton = findViewById<Button>(R.id.but_back_deutsch)
+        backButton.setOnClickListener {
+            val intent = Intent(this, RezeptActivity::class.java)
+            startActivity(intent)
+        }
     }
 
-    override fun onRobotFocusGained(qiContext: QiContext?) {
-        TODO("Not yet implemented")
-    }
+        override fun onRobotFocusGained(qiContext: QiContext?) {
+            TODO("Not yet implemented")
+        }
 
-    override fun onRobotFocusLost() {
-        TODO("Not yet implemented")
-    }
+        override fun onRobotFocusLost() {
+            TODO("Not yet implemented")
+        }
 
-    override fun onRobotFocusRefused(reason: String?) {
-        TODO("Not yet implemented")
-    }
+        override fun onRobotFocusRefused(reason: String?) {
+            TODO("Not yet implemented")
+        }
 
-}
+    }
