@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -14,6 +15,7 @@
         android:backgroundTint="#437C83"
         android:fontFamily="@font/aldrich"
         android:text="Zurück"
+        app:cornerRadius="6dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -30,12 +32,34 @@
         app:srcCompat="@drawable/_790679_simple_wallpapers" />
 
     <ImageView
+        android:id="@+id/imageView46"
+        android:layout_width="919dp"
+        android:layout_height="492dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/baklava1" />
+
+    <ImageView
         android:id="@+id/imageView30"
-        android:layout_width="473dp"
-        android:layout_height="140dp"
-        android:layout_marginEnd="625dp"
+        android:layout_width="236dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="560dp"
         android:contentDescription="@string/turkflag3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView46"
         app:srcCompat="@drawable/turky" />
+
+    <ImageButton
+        android:id="@+id/but_home2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/but_back_baklava"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_home_24" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

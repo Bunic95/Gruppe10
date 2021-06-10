@@ -50,6 +50,7 @@
         android:fontFamily="@font/aldrich"
         android:text="@string/deutsch"
         android:textSize="30sp"
+        app:cornerRadius="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -63,6 +64,7 @@
         android:fontFamily="@font/aldrich"
         android:text="@string/t_rkisch"
         android:textSize="30sp"
+        app:cornerRadius="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/but_deutsch" />
 
@@ -76,6 +78,7 @@
         android:fontFamily="@font/aldrich"
         android:text="@string/italienisch"
         android:textSize="30sp"
+        app:cornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/but_griechisch" />
 
@@ -88,6 +91,7 @@
         android:fontFamily="@font/aldrich"
         android:text="@string/zuf_llig"
         android:textSize="30sp"
+        app:cornerRadius="20dp"
         app:layout_constraintEnd_toStartOf="@+id/but_italienisch"
         app:layout_constraintStart_toEndOf="@+id/but_tuerkisch"
         app:layout_constraintTop_toBottomOf="@+id/but_tuerkisch" />
@@ -102,6 +106,7 @@
         android:fontFamily="@font/aldrich"
         android:text="@string/griechisch"
         android:textSize="30sp"
+        app:cornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -166,7 +171,18 @@
         android:backgroundTint="#437C83"
         android:fontFamily="@font/aldrich"
         android:text="Zurück"
+        app:cornerRadius="6dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/but_home12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/but_back_rezept"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_home_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

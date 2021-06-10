@@ -15,6 +15,7 @@
         android:backgroundTint="#437C83"
         android:fontFamily="@font/aldrich"
         android:text="Zurück"
+        app:cornerRadius="6dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -40,6 +41,7 @@
         android:fontFamily="@font/aldrich"
         android:text="Erbseineintopf"
         android:textSize="25sp"
+        app:cornerRadius="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -53,6 +55,7 @@
         android:fontFamily="@font/aldrich"
         android:text="Königsberger Klopse"
         android:textSize="25sp"
+        app:cornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -67,13 +70,13 @@
 
     <ImageView
         android:id="@+id/imageView23"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="341dp"
+        android:layout_height="228dp"
         android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="@+id/but_eintopf"
         app:layout_constraintStart_toStartOf="@+id/but_eintopf"
         app:layout_constraintTop_toBottomOf="@+id/but_eintopf"
-        app:srcCompat="@drawable/erbseneintorpr" />
+        app:srcCompat="@drawable/erbseneintopf2" />
 
     <ImageView
         android:id="@+id/imageView24"
@@ -83,6 +86,16 @@
         app:layout_constraintEnd_toEndOf="@+id/but_klopse"
         app:layout_constraintStart_toStartOf="@+id/but_klopse"
         app:layout_constraintTop_toBottomOf="@+id/but_klopse"
-        app:srcCompat="@drawable/koenigsbergerklopse" />
+        app:srcCompat="@drawable/koenigsberger_klopse2" />
+
+    <ImageButton
+        android:id="@+id/but_home4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/but_back_deutsch"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_home_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

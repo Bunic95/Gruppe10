@@ -28,6 +28,7 @@
         android:text="@string/organizer"
         android:textColor="#F8F7F7"
         android:textSize="30sp"
+        app:cornerRadius="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -52,6 +53,7 @@
         android:text="@string/wetter"
         android:textColor="#F8F7F7"
         android:textSize="30sp"
+        app:cornerRadius="20dp"
         app:layout_constraintEnd_toStartOf="@+id/but_rezepte"
         app:layout_constraintStart_toEndOf="@+id/but_organizer"
         app:layout_constraintTop_toTopOf="parent" />
@@ -67,6 +69,7 @@
         android:text="@string/rezepte"
         android:textColor="#F8F7F7"
         android:textSize="30sp"
+        app:cornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

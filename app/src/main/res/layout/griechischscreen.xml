@@ -15,6 +15,7 @@
         android:backgroundTint="#437C83"
         android:fontFamily="@font/aldrich"
         android:text="@string/zur_ck3"
+        app:cornerRadius="6dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -40,6 +41,7 @@
         android:fontFamily="@font/aldrich"
         android:text="@string/gyros"
         android:textSize="30sp"
+        app:cornerRadius="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -53,6 +55,7 @@
         android:fontFamily="@font/aldrich"
         android:text="@string/kritharaki_salat"
         android:textSize="30sp"
+        app:cornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -81,10 +84,21 @@
         android:id="@+id/imageView28"
         android:layout_width="424dp"
         android:layout_height="218dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="16dp"
         android:contentDescription="@string/bildsalat"
         app:layout_constraintEnd_toEndOf="@+id/but_salat"
         app:layout_constraintStart_toStartOf="@+id/but_salat"
         app:layout_constraintTop_toBottomOf="@+id/but_salat"
-        app:srcCompat="@drawable/kritharkisalat" />
+        app:srcCompat="@drawable/kritharaki_salat_mit_hackfleisch2" />
+
+    <ImageButton
+        android:id="@+id/but_home6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="10dp"
+        android:contentDescription="@string/homeg"
+        app:layout_constraintEnd_toStartOf="@+id/but_back_griech"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_home_24" />
 </androidx.constraintlayout.widget.ConstraintLayout>

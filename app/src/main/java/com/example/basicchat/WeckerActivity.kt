@@ -4,7 +4,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.provider.AlarmClock
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.TextView
+import android.widget.Toast
 import com.aldebaran.qi.sdk.QiContext
 import com.aldebaran.qi.sdk.QiSDK
 import com.aldebaran.qi.sdk.RobotLifecycleCallbacks
@@ -38,11 +40,19 @@ class WeckerActivity : RobotActivity(), RobotLifecycleCallbacks {
         val txt_datumaktuell: TextView = findViewById(R.id.txt_datumaktuell)
         txt_datumaktuell.setText(datumsformat.format(kalender.time))
 
+        //Button zurück in den Homescreen
+        val but_home = findViewById<ImageButton>(R.id.but_home16)
+        but_home.setOnClickListener {
+            val intent = Intent(this, DecisionActivity::class.java)
+            startActivity(intent)
+            Toast.makeText(this, "Zurück zum Anfang", Toast.LENGTH_SHORT).show()
+        }
         //Button zurück zur Vorrigen Activity
         val backButton = findViewById<Button>(R.id.but_back_wecker)
         backButton.setOnClickListener {
             val intent = Intent(this, OrganizerActivity::class.java)
             startActivity(intent)
+            Toast.makeText(this, "Zurück", Toast.LENGTH_SHORT).show()
         }
     }
 

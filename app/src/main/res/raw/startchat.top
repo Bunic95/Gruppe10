@@ -1,34 +1,19 @@
 topic: ~startchat()
 # Smalltalk
-concept:(Hallo)[Hallo hey hi hello Servus Salli Salut "Hallo Pepper"]
+concept:(Hallo) [Hallo hey hi hello Servus Salli Salut "Hallo Pepper"]
+concept:(Gut) [Gut Perfekt Supi "mir gehts gut" "mir geht es gut"]
+concept:(Schlecht) [schlecht "geht so" "nicht so gut" "nicht besonders gut"]
 u:(~Hallo)
-    $speech = "Hallo Mensch wie geht es dir?" #Hierdurch wird die Nachricht innerhalb "" auf dem Display angezeigt
-    Hallo Mensch, wie geht es dir?
 ^execute(raiseLeftHand)
-    u1:(Gut)
+    $speech = "Hallo Mensch wie geht es dir?"  #Hierdurch wird die Nachricht innerhalb "" auf dem Display angezeigt
+    Hallo Mensch wie geht es dir?
+    u1:(~Gut)
     $speech = "Das freut mich sehr! Wie kann ich dir etwas Gutes tun? Wenn du möchtest kann ich dir Notizen machen oder einen Wecker erstellen. Dir Auskunft über das Wetter geben, oder dir tolle Rezepte anzeigen. Ansonsten Frage mich doch nach einem Witz, Fußballfakt oder Zungenbrecher."
     Das freut mich sehr! Wie kann ich dir etwas Gutes tun? Wenn du möchtest kann ich dir Notizen machen oder einen Wecker erstellen. Dir Auskunft über das Wetter geben, oder dir tolle Rezepte anzeigen. Ansonsten Frage mich doch nach einem Witz, Fußballfakt oder Zungenbrecher.
 ^endDiscuss(EndFirstDecision) #beendet Gesprächsverlauf und springt zur nächsten Aktivität
-    u1:([schlecht "geht so" "nicht so gut" "nicht besonders gut"])
+    u1:(~Schlecht)
     $speech = "Oh... Das ist aber schade! Wie kann ich dir etwas Gutes tun? Wenn du möchtest kann ich dir Notizen machen oder einen Wecker erstellen. Dir Auskunft über das Wetter geben, oder dir tolle Rezepte anzeigen. Ansonsten Frage mich doch nach einem Witz, Fußballfakt oder Zungenbrecher."
-    Oh... Das ist aber schade! Wie kann ich dir etwas Gutes tun? Wenn du möchtest kann ich dir Notizen machen oder einen Wecker erstellen. Dir Auskunft über das Wetter geben, oder dir tolle Rezepte anzeigen. Ansonsten Frage mich doch nach einem Witz, Fußballfakt oder Zungenbrecher.
+    Oh. Das ist aber schade! Wie kann ich dir etwas Gutes tun? Wenn du möchtest kann ich dir Notizen machen oder einen Wecker erstellen. Dir Auskunft über das Wetter geben, oder dir tolle Rezepte anzeigen. Ansonsten Frage mich doch nach einem Witz, Fußballfakt oder Zungenbrecher.
 ^endDiscuss(EndFirstDecision)
 #Hier aus dieser activity rausgehen und neue starten
 
-
-
-#u:([Organizer Wecker Termin Kalender Notizen Erinnerung]) Welche der Funktionen möchtest du im Organizer öffnen? Diese werden nun auf dem Tablet angezeigt!
-#u1:(Wecker) möchtest du einen neuen Wecker stellen oder einen vorhandenen Löschen?
-#u2:(Wecker löschen) welchen der Wecker möchtest du löschen. nenne mir die Zahl die links neben dem Wecker steht!
-#u2:(Wecker erstellen) Wann und um wiviel Uhr möchtest du einen Wecker erstellen?
-#hier die Wecker optionen anzeigen die gespeichert werden müssen. Mit zahlen hinterlegen damit die Persona löschen kann.
-#u1:(Kalender) ich zeige dir nun deinen Kalender, möchtest du einen neuen Termin erstellen oder einen vorhandenen Löschen?
-#u2:(Termin löschen) welchen Termin möchtest du löschen?
-#u2:(Termin erstellen) An welchem Datum soll ein Termin erstellt werden?
-#u1:(Erinnerung) Hier siehst du nun deine Erinnerungen. Möchtest du eine Erinnerung erstellen oder eine vorhandene löschen?
-#u2:(Erninnerung erstellen) Wann möchtest du erinnert werden?
-#u2:(erinnerung löschen) Welche erinnerung möchtest du löschen?
-#u1:(Notiz) Möchtest du eine neue Notiz ertsellen, deine vorhandenen sehen oder eine löschen?
-#u2:(Notizen ansehen) Auf meinem Tablet siehst du nun deine gespeicherten Notizen
-#u2:(Notiz löschen) Welche der Notizen möchtest du löschen?
-#u2:(Notiz erstellen) Was soll ich dir für eine Notiz erstellen?

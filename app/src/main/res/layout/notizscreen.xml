@@ -14,6 +14,7 @@
         android:backgroundTint="#437C83"
         android:fontFamily="@font/aldrich"
         android:text="Zurück"
+        app:cornerRadius="6dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -124,6 +125,7 @@
         android:fontFamily="@font/aldrich"
         android:text="@string/speichern"
         android:textSize="20sp"
+        app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="@+id/not_1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/not_1" />
@@ -137,6 +139,7 @@
         android:fontFamily="@font/aldrich"
         android:text="@string/speichern"
         android:textSize="20sp"
+        app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="@+id/not_2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/not_2" />
@@ -150,6 +153,7 @@
         android:fontFamily="@font/aldrich"
         android:text="@string/speichern"
         android:textSize="20sp"
+        app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="@+id/not_3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/not_3" />
@@ -163,6 +167,7 @@
         android:fontFamily="@font/aldrich"
         android:text="@string/speichern"
         android:textSize="20sp"
+        app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="@+id/not_4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/not_4" />
@@ -214,5 +219,15 @@
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/not_4" />
+
+    <ImageButton
+        android:id="@+id/but_home9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/but_back_notizen"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_home_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

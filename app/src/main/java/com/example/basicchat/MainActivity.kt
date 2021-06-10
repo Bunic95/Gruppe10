@@ -32,7 +32,7 @@ class MainActivity : RobotActivity(), RobotLifecycleCallbacks { // robotactivity
                 .withText("Mein Name ist Pepper. Begrüße mich um eine Konversation zu starten") //Text den Pepper beim start sagt.
                 .build()
         say.run() //Say function ausführen
-    //Festlegen der Sprache des Roboters//
+    //Festlegen der Sprache des Roboters
         val locale = com.aldebaran.qi.sdk.`object`.locale.Locale(Language.GERMAN, Region.GERMANY)
     //Einbinden der zuvor erstellen Topic "startchat.top.top"
         val topic = TopicBuilder.with(qiContext).withResource(R.raw.startchat).build() //erstellen der variable "topic" + bilden der topic
@@ -53,7 +53,7 @@ class MainActivity : RobotActivity(), RobotLifecycleCallbacks { // robotactivity
 // Ausführen des Chats
         val fchat: Future<Void> = chat.async().run() // future void wird benötigt um den Chat abbrechbar zu machen
 
-        // Chat stoppen wenn qichatbot fertig ist. Hier kann dann in andere topic gesprungen werden.
+        // Chat stoppen wenn qichatbot fertig ist. Hier kann dann in andere topic gesprungen werden. Im chat bei ^endDiscuss
         qiChatbot.addOnEndedListener { endReason ->
             Log.i(TAG, "qichatbot end reason = $endReason")
             fchat.requestCancellation()

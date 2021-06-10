@@ -15,6 +15,7 @@
         android:backgroundTint="#437C83"
         android:fontFamily="@font/aldrich"
         android:text="@string/zur_ck2"
+        app:cornerRadius="6dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -77,12 +78,13 @@
 
     <ImageView
         android:id="@+id/imageView26"
-        android:layout_width="347dp"
-        android:layout_height="253dp"
+        android:layout_width="314dp"
+        android:layout_height="199dp"
+        android:layout_marginTop="25dp"
         app:layout_constraintEnd_toEndOf="@+id/but_risotto"
         app:layout_constraintStart_toStartOf="@+id/but_risotto"
         app:layout_constraintTop_toBottomOf="@+id/but_risotto"
-        app:srcCompat="@drawable/risottomilanese" />
+        app:srcCompat="@drawable/risotto2" />
 
     <ImageButton
         android:id="@+id/but_home"

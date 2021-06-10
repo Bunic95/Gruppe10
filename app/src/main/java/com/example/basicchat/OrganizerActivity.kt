@@ -3,6 +3,8 @@ package com.example.basicchat
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
+import android.widget.Toast
 import com.aldebaran.qi.Future
 import com.aldebaran.qi.sdk.QiContext
 import com.aldebaran.qi.sdk.QiSDK
@@ -46,6 +48,14 @@ class OrganizerActivity : RobotActivity(), RobotLifecycleCallbacks {
             goToNotizen()
             //thread // Hiermit kann man Pepper interne Funktionen direkt aufrufen
         }
+
+        //Button zurück in den Homescreen
+        val but_home = findViewById<ImageButton>(R.id.but_home10)
+        but_home.setOnClickListener {
+            val intent = Intent(this, DecisionActivity::class.java)
+            startActivity(intent)
+            Toast.makeText(this, "Zurück zum Anfang", Toast.LENGTH_SHORT).show()
+        }
         val but_wecker1: Button =
             findViewById(R.id.but_wecker1) //Button wird als variable deklariert
         but_wecker1.setOnClickListener {
@@ -58,6 +68,7 @@ class OrganizerActivity : RobotActivity(), RobotLifecycleCallbacks {
         backButton.setOnClickListener {
             val intent = Intent(this, DecisionActivity::class.java)
             startActivity(intent)
+            Toast.makeText(this, "Zurück", Toast.LENGTH_SHORT).show()
         }
     }
     override fun onRobotFocusLost() {

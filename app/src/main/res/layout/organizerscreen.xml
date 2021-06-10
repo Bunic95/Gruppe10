@@ -15,6 +15,7 @@
         android:backgroundTint="#437C83"
         android:fontFamily="@font/aldrich"
         android:text="@string/zur_ck"
+        app:cornerRadius="6dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -41,6 +42,7 @@
         android:text="@string/wecker"
         android:textColor="#F8F7F7"
         android:textSize="30sp"
+        app:cornerRadius="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -64,6 +66,7 @@
         android:text="@string/notizen"
         android:textColor="#F8F7F7"
         android:textSize="30sp"
+        app:cornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -101,5 +104,15 @@
         app:layout_constraintStart_toStartOf="@+id/but_wecker1"
         app:layout_constraintTop_toBottomOf="@+id/but_wecker1"
         app:srcCompat="@drawable/alarm_clock" />
+
+    <ImageButton
+        android:id="@+id/but_home10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/but_back_organizer"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_home_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

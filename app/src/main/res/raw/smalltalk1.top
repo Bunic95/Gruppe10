@@ -1,5 +1,70 @@
 topic: ~smalltalk1()
-# Defining extra concepts out of words or group of words
-concept:(hello) [hello hi hey "good morning" greetings]
-# Replying to speech
-u:(~hello) ~hello
+concept:(Zungenbrecher) [Zungenbrecher "sag mir einen Zungenbrecher" Brecher]
+concept:(Witz) [Witz Witze "erzähl mir einen Witz"]
+concept:(Fußball) [Fußballfakt Fussballfakt Fakt "erzähle mir einen Fußballfakt" "Fußball ist toll"]
+concept:(Auswahl) [ Wecker  Rezept Rezepte Notiz Notizen "erstelle mir eine Notiz" Wetter "wie wird das Wetter heute?" "stelle mir den Wecker" "zeige mir rezepte"]
+concept:(Nein) [nö ne nein niet "nein danke" "ein andermal" "später vielleicht" "lass mal"]
+concept:(Ja) [ja jap jo si "si senior" "ja gerne" "ja bitte" "hau raus"]
+
+
+u:(~Auswahl)
+Drücke hierzu einfach auf den Knopf der jeweiligen Funktion auf meinem Bildschirm
+u:(~Zungenbrecher)
+^enableThenGoto(ZUNGENBRECHER)
+proposal: %NEXT
+Wähle gerne per Knopfdruck eine Funktion auf meinem Display oder Frage mich erneut nach einem Witz Zungenbrecher oder Fußballfakt!
+u:(~Zungenbrecher)^enableThenGoto(ZUNGENBRECHER)
+u:(~Witz)^enableThenGoto(WITZ)
+u:(~Fußball)^enableThenGoto(FUßBALL)
+
+proposal: %ZUNGENBRECHER
+Okay aufgepasst 3 2 1 !
+^rand[
+    "Als Anna abends aß aß Anna abends Ananas"
+    "Griesbrei bleibt Griesbrei und Kriegsbeil bleibt Kriegsbeil. Kriegsbeil bleibt Kriegsbeil und Griesbrei bleibt Griesbrei."
+    "Der Krabbenfischer knabbert Knabberkrabben Knabberkrabben knabbert der Krabbenfischer."
+    "Es klapperte die Klapperschlang' bis ihre Klapper schlapper klang"
+    "Gibst Du dem Opi Opium, bringt Opium den Opi um."
+    "Wenn Fliegen hinter Fliegen fliegen, dann fliegen Fliegen Fliegen nach."
+    ]
+    Möchtest du noch einen Zungenbrecher hören?
+    u1:(~Ja)
+    ^sameProposal
+    u1:(~Nein) ^enableThenGoto(NEXT)
+
+proposal: %WITZ
+Okay halt dich fest!
+^rand[
+    "Vater zum Sohn... Wie eine 6 in Deutsch? Hab doch geübt mit du"
+    "Eine schwangere Frau geht zum Metzger. Ich bekomme 3 Kilo Gehacktes. Darauf der Metzger. Sachen gibt's!"
+    "Ein Beamter zum anderen. Was haben die Leute nur wir tun doch nichts."
+    "Die meisten Leute schauen mich schockiert an wenn sie herausfinden was für ein schlechter Elektriker ich bin."
+    "Kürzester Witz aller Zeiten... Brennholzverleih"
+    "Wie nennt man auf Chinesisch Oberschenkelbeinbruch? Knicki-Knacki Nah-Bei-Sacki."
+    ]
+    #Hier lachen execute einfügen
+    Möchtest du noch einen Witz hören?
+    u1:(~Ja)
+    ^sameProposal
+    u1:(~Nein) ^enableThenGoto(NEXT)
+
+proposal: %FUßBALL
+^rand[
+    "Norwegen ist die einzige Nation, gegen die Brasilien bei einem Duell noch nie gewinnen konnte"
+    "Bei der WM 2010 war Neuseeland die einzige Nation, die im Turnierverlauf ohne Niederlage blieb."
+    "Zlatan Ibrahimovic hat für sechs verschiedene Klubs gespielt, die die Champions League gewonnen haben - hat den Henkelpott aber nie geholt."
+    "Cristiano Ronaldo ist 869 Tage älter als Lionel Messi - Ronaldos Sohn ist ebenfalls 869 Tage älter als Messis Sohn."
+    "Der Vater von Gary Neville heißt Neville Neville."
+    "Seit 1982 gab es in jedem WM-Finale mindestens einen Spieler vom FC Bayern auf dem Feld."
+    "Indien qualifizierte sich für die WM 1950. Da die FIFA ihnen verbot, barfuß zu spielen, sagten sie aber ihre Teilnahme ab."
+    "In Halbfinalspielen der Champions League hat CR7 mehr Treffer erzielt als Messi, Suarez, Neymar und Ibrahimovic ZUSAMMEN."
+    "Chelsea ist genauso oft abgestiegen wie sie die Meisterschaft gewonnen haben sechs mal."
+    "Dundee United hat eine 100 prozentige Siegquote gegen den FC Barcelona 4 Spiele, 4 Siege!"
+    ]
+    Möchtest du noch einen Fußballfakt hören?
+    u1:(~Ja)
+    ^sameProposal
+    u1:(~Nein) ^enableThenGoto(NEXT)
+
+
+

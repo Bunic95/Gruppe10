@@ -17,15 +17,6 @@
         app:layout_constraintVertical_bias="0.474"
         app:srcCompat="@drawable/_790679_simple_wallpapers" />
 
-    <ImageView
-        android:id="@+id/imageView36"
-        android:layout_width="407dp"
-        android:layout_height="115dp"
-        android:layout_marginEnd="680dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/german" />
-
     <Button
         android:id="@+id/but_back_klopse"
         android:layout_width="wrap_content"
@@ -35,6 +26,37 @@
         android:backgroundTint="#437C83"
         android:fontFamily="@font/aldrich"
         android:text="Zurück"
+        app:cornerRadius="6dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView48"
+        android:layout_width="919dp"
+        android:layout_height="492dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/klopse1" />
+
+    <ImageView
+        android:id="@+id/imageView36"
+        android:layout_width="236dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="580dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView48"
+        app:srcCompat="@drawable/german" />
+
+    <ImageButton
+        android:id="@+id/but_home8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/but_back_klopse"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_home_24" />
 </androidx.constraintlayout.widget.ConstraintLayout>

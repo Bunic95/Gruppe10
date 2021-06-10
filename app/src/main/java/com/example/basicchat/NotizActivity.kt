@@ -4,10 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import com.aldebaran.qi.sdk.QiContext
 import com.aldebaran.qi.sdk.QiSDK
 import com.aldebaran.qi.sdk.RobotLifecycleCallbacks
@@ -24,6 +21,14 @@ class NotizActivity : RobotActivity(), RobotLifecycleCallbacks {
         loadData2()
         loadData3()
         loadData4()
+
+        //Button zurück in den Homescreen
+        val but_home = findViewById<ImageButton>(R.id.but_home9)
+        but_home.setOnClickListener {
+            val intent = Intent(this, DecisionActivity::class.java)
+            startActivity(intent)
+            Toast.makeText(this, "Zurück zum Anfang", Toast.LENGTH_SHORT).show()
+        }
 
         val but_notizen1: Button =
             findViewById(R.id.but_speichern1) //Button wird als variable deklariert
@@ -51,6 +56,7 @@ class NotizActivity : RobotActivity(), RobotLifecycleCallbacks {
         backButton.setOnClickListener {
             val intent = Intent(this, OrganizerActivity::class.java)
             startActivity(intent)
+            Toast.makeText(this, "Zurück", Toast.LENGTH_SHORT).show()
         }
 
     }

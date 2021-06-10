@@ -15,6 +15,7 @@
         android:backgroundTint="#437C83"
         android:fontFamily="@font/aldrich"
         android:text="Zurück"
+        app:cornerRadius="6dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -50,6 +51,7 @@
         android:fontFamily="@font/aldrich"
         android:text="@string/baklava"
         android:textSize="30sp"
+        app:cornerRadius="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -63,6 +65,7 @@
         android:fontFamily="@font/aldrich"
         android:text="@string/pide"
         android:textSize="30sp"
+        app:cornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -87,4 +90,14 @@
         app:layout_constraintStart_toStartOf="@+id/but_pide"
         app:layout_constraintTop_toBottomOf="@+id/but_pide"
         app:srcCompat="@drawable/bcc8c927_7512_48d5_806e_dac04f7c8546" />
+
+    <ImageButton
+        android:id="@+id/but_home15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/but_back_turk"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_home_24" />
 </androidx.constraintlayout.widget.ConstraintLayout>

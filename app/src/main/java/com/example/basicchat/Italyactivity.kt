@@ -15,7 +15,7 @@ class Italyactivity : RobotActivity(), RobotLifecycleCallbacks {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.italyscreen)
         QiSDK.register(this, this)
-
+        //Button zurück in den Homescreen
         val but_home = findViewById<ImageButton>(R.id.but_home)
         but_home.setOnClickListener {
             val intent = Intent(this, DecisionActivity::class.java)
@@ -34,14 +34,12 @@ class Italyactivity : RobotActivity(), RobotLifecycleCallbacks {
         but_risotto.setOnClickListener {
             // fchat.requestCancellation() //ACHTUNG DIES NOCH EINÜGEN WENN CHAT EINGEFÜGT IST
             goToRisotto()
-            Toast.makeText(this, "Zurück", Toast.LENGTH_SHORT).show()
             //thread {  }
         }
         val but_calamari: Button = findViewById(R.id.but_calamari) //Button wird als variable deklariert
         but_calamari.setOnClickListener {
             // fchat.requestCancellation() //ACHTUNG DIES NOCH EINÜGEN WENN CHAT EINGEFÜGT IST
             goToCalamari()
-            Toast.makeText(this, "Zurück", Toast.LENGTH_SHORT).show()
             //thread {  }
         }
     }

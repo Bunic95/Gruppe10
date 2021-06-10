@@ -3,6 +3,8 @@ package com.example.basicchat
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
+import android.widget.Toast
 import com.aldebaran.qi.sdk.QiContext
 import com.aldebaran.qi.sdk.QiSDK
 import com.aldebaran.qi.sdk.RobotLifecycleCallbacks
@@ -14,12 +16,21 @@ class deutschactivity : RobotActivity(), RobotLifecycleCallbacks {
         setContentView(R.layout.deutschscreen)
         QiSDK.register(this, this)
 
+        //Button zurück in den Homescreen
+        val but_home = findViewById<ImageButton>(R.id.but_home4)
+        but_home.setOnClickListener {
+            val intent = Intent(this, DecisionActivity::class.java)
+            startActivity(intent)
+            Toast.makeText(this, "Zurück zum Anfang", Toast.LENGTH_SHORT).show()
+        }
+
 
         //Button zurück zur Vorrigen Activity
         val backButton = findViewById<Button>(R.id.but_back_deutsch)
         backButton.setOnClickListener {
             val intent = Intent(this, RezeptActivity::class.java)
             startActivity(intent)
+            Toast.makeText(this, "Zurück", Toast.LENGTH_SHORT).show()
         }
         val but_klopse: Button = findViewById(R.id.but_klopse) //Button wird als variable deklariert
         but_klopse.setOnClickListener {
