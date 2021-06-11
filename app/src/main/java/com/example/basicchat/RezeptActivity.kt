@@ -13,6 +13,7 @@ import com.aldebaran.qi.sdk.`object`.locale.Language
 import com.aldebaran.qi.sdk.`object`.locale.Region
 import com.aldebaran.qi.sdk.builder.ChatBuilder
 import com.aldebaran.qi.sdk.builder.QiChatbotBuilder
+import com.aldebaran.qi.sdk.builder.SayBuilder
 import com.aldebaran.qi.sdk.builder.TopicBuilder
 import com.aldebaran.qi.sdk.design.activity.RobotActivity
 
@@ -24,6 +25,11 @@ class RezeptActivity : RobotActivity(), RobotLifecycleCallbacks {
     }
     //Verknüpfungen zu Buttons erstellen. Aktivitäten für jeweiliges Land erstellen und verknüpfen.
     override fun onRobotFocusGained(qiContext: QiContext?) {
+        //Text den Pepper beim start dieser Activity sagt.
+        val say = SayBuilder.with(qiContext)
+            .withText("Du scheinst Hunger zu haben? Hier findest du Rezepte unterschiedlicher Länder, klicke auf eines oder lasse dir ein zufälliges Rezept geben.")
+            .build()
+        say.run() //Say function ausführen
         //Festlegen der Sprache des Roboters//
         val locale = com.aldebaran.qi.sdk.`object`.locale.Locale(Language.GERMAN, Region.GERMANY)
         //Einbinden der zuvor erstellen Topic "smalltalk1.top"
@@ -34,7 +40,6 @@ class RezeptActivity : RobotActivity(), RobotLifecycleCallbacks {
         //Chat erstellen
         val chat = ChatBuilder.with(qiContext).withChatbot(qiChatbot).withLocale(locale).build()
         val fchat: Future<Void> = chat.async().run()
-
         //Ab hier einbinden der Buttons
 
         //Button zurück in den Homescreen

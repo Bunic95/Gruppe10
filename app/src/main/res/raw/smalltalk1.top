@@ -5,7 +5,8 @@ concept:(Fußball) [Fußballfakt Fussballfakt Fakt "erzähle mir einen Fußballf
 concept:(Auswahl) [ Wecker  Rezept Rezepte Notiz Notizen "erstelle mir eine Notiz" Wetter "wie wird das Wetter heute?" "stelle mir den Wecker" "zeige mir rezepte"]
 concept:(Nein) [nö ne nein niet "nein danke" "ein andermal" "später vielleicht" "lass mal"]
 concept:(Ja) [ja jap jo si "si senior" "ja gerne" "ja bitte" "hau raus"]
-
+concept:(time) [Zeit Uhrzeit "welche Zeit ist gerade" "wieviel Uhr ist es"]
+concept:(date) [Datum Tag "welchen tag haben wir heute" "welches Datum ist heute"]
 
 u:(~Auswahl)
 Drücke hierzu einfach auf den Knopf der jeweiligen Funktion auf meinem Bildschirm
@@ -66,5 +67,13 @@ proposal: %FUßBALL
     ^sameProposal
     u1:(~Nein) ^enableThenGoto(NEXT)
 
+    u1:(~time) ^enableThenGoto(TIME)
+    u1:(~date) ^enableThenGoto(DATE)
 
+#Uhrzeit geht noch nciht. noch anpassen
+    proposal:%TIME
+    u1:(~time) Es ist ^currentTime .
+
+    proposal:%DATE
+    u1:(~date) Heute ist der ^currentDate .
 

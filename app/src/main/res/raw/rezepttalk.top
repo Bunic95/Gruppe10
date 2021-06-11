@@ -1,3 +1,47 @@
 topic: ~rezepttalk()
-# Sprachaufruf DeutschActivity
+# KONZEPT!! SEBI ARBEITET DIES NOCH AUS.
+concept:(unsicher) ["Ich weiß nicht was ich [essen mampfen fressen schnabullierien fraisen] soll" unsicher "ich weiß nicht auf was ich [bock lust hunger gluste kohldampf] habe"]
+concept:(kochen) ["kannst du für mich kochen Pepper?" "Kannst du kochen?" Kochen]
+concept:(Rezeptdeutsch) ["[Welche "was für" hast] Deutsche Rezepte" "deutschen rezepte" Deutsch]
+concept:(Rezeptitalienisch) ["[Welche "was für" hast] Italienische Rezepte" "italienischen rezepte" Italienisch]
+concept:(Rezeptgriechisch) ["[Welche "was für" hast] Griechischen Rezepte" "griechische rezepte" Griechisch]
+concept:(Rezepttürkisch) ["[Welche "was für" hast] Türkische Rezepte" "türkischen rezepte" Türkisch]
+concept:(Nein) [nö ne nein niet "nein danke" "ein andermal" "später vielleicht" "lass mal"]
+concept:(Ja) [ja jap jo si "si senior" "ja gerne" "ja bitte" "hau raus"]
+concept:(Faktentürkei)["erzähle mir einen Fakt über Türkisches Essen" "Türkische [Küche Essen Spezialitäten]" Fakt Küche]
+concept:(Faktendeutsch)["erzähle mir einen Fakt über Deutsches Essen" "Deutsche [Küche Essen Spezialitäten]" Fakt Küche]
+concept:(Faktenitalienisch)["erzähle mir einen Fakt über Italienisches Essen" "Italienische [Küche Essen Spezialitäten]" Fakt Küche]
+concept:(Faktengriechisch)["erzähle mir einen Fakt über Griechisches Essen" "Griechisch [Küche Essen Spezialitäten]" Fakt Küche]
+
+
+u:(~unsicher)
+Ich habe eine große Internationale auswahl, wenn du dir unsicher bist was du essen möchtest Klicke auf den zufällig Knopf auf meinem Display, so nehme ich dir deine Entscheidung ab!
+u:(~kochen)
+Das haben mir die drei Studenten die mich programmiert haben noch nicht beigebracht. Tut mir leid, willst du stattdessen einen zufälligen Fakt über die Küche eines der Länder hören?
+u1:(~Ja)
+    ^enableThenGoto(Fakt) #führt zu proposal "Fakt"
+    u1:(~Nein)
+    Okay, wähle gerne auf meinem Display eines der Länder aus um zu den Rezepten zu gelangen
+u:(~Faktentürkei)
+^enableThenGoto(FAKTENTÜRKEI)
+
+
+proposal: %FAKTENTÜRKEI
+^rand
+"Die Türkische Küche stinkt"
+"Die Türkische Küche stinkt"
+"Die Türkische Küche stinkt"
+Willst du noch einen Fakt über die Türkische Küche ? #Peppers antwort bzw. Frage um weiter zu führen
+u1:(~Ja)
+^sameProposal
+u1:(~Nein)
+Okay, wähle gerne auf meinem Display eines der Länder aus um zu den Rezepten zu gelangen
+
+proposal: %Fakt
+^rand[ # gibt Random einen Fakt der untenstehenden aus
+"Die Türkische Küche stinkt"
+"Die Türkische Küche stinkt"
+"Die Türkische Küche stinkt"
+"Die Türkische Küche stinkt"
+]
 

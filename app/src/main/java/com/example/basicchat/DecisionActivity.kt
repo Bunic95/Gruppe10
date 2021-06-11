@@ -54,7 +54,6 @@ class DecisionActivity : RobotActivity(), RobotLifecycleCallbacks {
         but_rezepte.setOnClickListener {
             fchat.requestCancellation()
             goToRezept()
-            //thread {  }
             }
     }
 

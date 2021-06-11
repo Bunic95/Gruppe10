@@ -4,16 +4,16 @@ concept:(Hallo) [Hallo hey hi hello Servus Salli Salut "Hallo Pepper"]
 concept:(Gut) [Gut Perfekt Supi "mir gehts gut" "mir geht es gut"]
 concept:(Schlecht) [schlecht "geht so" "nicht so gut" "nicht besonders gut"]
 u:(~Hallo)
-^execute(raiseLeftHand)
     $speech = "Hallo Mensch wie geht es dir?"  #Hierdurch wird die Nachricht innerhalb "" auf dem Display angezeigt
     Hallo Mensch wie geht es dir?
+    ^execute(raiseLeftHand)
     u1:(~Gut)
-    $speech = "Das freut mich sehr! Wie kann ich dir etwas Gutes tun? Wenn du möchtest kann ich dir Notizen machen oder einen Wecker erstellen. Dir Auskunft über das Wetter geben, oder dir tolle Rezepte anzeigen. Ansonsten Frage mich doch nach einem Witz, Fußballfakt oder Zungenbrecher."
-    Das freut mich sehr! Wie kann ich dir etwas Gutes tun? Wenn du möchtest kann ich dir Notizen machen oder einen Wecker erstellen. Dir Auskunft über das Wetter geben, oder dir tolle Rezepte anzeigen. Ansonsten Frage mich doch nach einem Witz, Fußballfakt oder Zungenbrecher.
+    $speech = "Das freut mich! Wenn du möchtest kannst du nun meine Funktionen auf dem Display ausführen oder mich nach einem Witz, Zungenbrecher oder Fußballfakt fragen."
+    Das freut mich! Wenn du möchtest kannst du nun meine Funktionen auf dem Display ausführen oder mich nach einem Witz Zungenbrecher oder Fußballfakt fragen
 ^endDiscuss(EndFirstDecision) #beendet Gesprächsverlauf und springt zur nächsten Aktivität
     u1:(~Schlecht)
-    $speech = "Oh... Das ist aber schade! Wie kann ich dir etwas Gutes tun? Wenn du möchtest kann ich dir Notizen machen oder einen Wecker erstellen. Dir Auskunft über das Wetter geben, oder dir tolle Rezepte anzeigen. Ansonsten Frage mich doch nach einem Witz, Fußballfakt oder Zungenbrecher."
-    Oh. Das ist aber schade! Wie kann ich dir etwas Gutes tun? Wenn du möchtest kann ich dir Notizen machen oder einen Wecker erstellen. Dir Auskunft über das Wetter geben, oder dir tolle Rezepte anzeigen. Ansonsten Frage mich doch nach einem Witz, Fußballfakt oder Zungenbrecher.
+    $speech = "Oh, das tut mir leid! Kann ich dir bei etwas helfen? Wenn du möchtest kannst du nun meine Funktionen auf dem Display ausführen oder mich nach einem Witz Zungenbrecher oder Fußballfakt fragen"
+    Oh, das tut mir leid! Wenn du möchtest kannst du nun meine Funktionen auf dem Display ausführen oder mich nach einem Witz Zungenbrecher oder Fußballfakt fragen
 ^endDiscuss(EndFirstDecision)
 #Hier aus dieser activity rausgehen und neue starten
 
