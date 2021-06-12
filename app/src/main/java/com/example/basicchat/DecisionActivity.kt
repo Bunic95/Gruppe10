@@ -76,7 +76,7 @@ class DecisionActivity : RobotActivity(), RobotLifecycleCallbacks {
         startActivity(changeToOrganizer)
     }
     private fun goToWetter() {
-        val changeToWetter = Intent(this, WetterActivity::class.java)
+        val changeToWetter = Intent(this, WetterActivitytest::class.java)
         startActivity(changeToWetter)
     }
 }
