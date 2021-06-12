@@ -1,5 +1,5 @@
 topic: ~rezepttalk()
-# KONZEPT!! SEBI ARBEITET DIES NOCH AUS.
+# Sprachaufruf DeutschActivity
 concept:(unsicher) ["Ich weiß nicht was ich [essen mampfen fressen schnabullierien fraisen] soll" unsicher "ich weiß nicht auf was ich [bock lust hunger gluste kohldampf] habe"]
 concept:(kochen) ["kannst du für mich kochen Pepper?" "Kannst du kochen?" Kochen]
 concept:(Rezeptdeutsch) ["[Welche "was für" hast] Deutsche Rezepte" "deutschen rezepte" Deutsch]
@@ -14,34 +14,109 @@ concept:(Faktenitalienisch)["erzähle mir einen Fakt über Italienisches Essen" 
 concept:(Faktengriechisch)["erzähle mir einen Fakt über Griechisches Essen" "Griechisch [Küche Essen Spezialitäten]" Fakt Küche]
 
 
+u:(~Rezeptdeutsch)
+Ich habe Königsberger Klopse und einen Erbsen-Eintopf zur Auswahl. Klicke auf die Deutsch Schaltfläche um eines der Gerichte auszuwählen!
+u:(~Rezeptitalienisch)
+Ich habe Calamari und ein Risotto zur Auswahl. Klicke auf die Italienisch Schaltfläche um eines der Gerichte auszuwählen!
+u:(~Rezeptgriechisch)
+Ich habe einen Khatharki Salat und Gyros zur Auswahl. Klicke auf die Griechisch Schaltfläche um eines der Gerichte auszuwählen!
+u:(~Rezepttürkisch)
+Ich habe Pide und leckeres Baklava zur Auswahl. Klicke auf die Türkisch Schaltfläche um eines der Gerichte auszuwählen!
+
+
 u:(~unsicher)
-Ich habe eine große Internationale auswahl, wenn du dir unsicher bist was du essen möchtest Klicke auf den zufällig Knopf auf meinem Display, so nehme ich dir deine Entscheidung ab!
+Ich habe eine große Internationale Auswahl, wenn du dir unsicher bist was du essen möchtest Klicke auf den zufällig Knopf auf meinem Display, so nehme ich dir deine Entscheidung ab!
 u:(~kochen)
 Das haben mir die drei Studenten die mich programmiert haben noch nicht beigebracht. Tut mir leid, willst du stattdessen einen zufälligen Fakt über die Küche eines der Länder hören?
 u1:(~Ja)
     ^enableThenGoto(Fakt) #führt zu proposal "Fakt"
     u1:(~Nein)
     Okay, wähle gerne auf meinem Display eines der Länder aus um zu den Rezepten zu gelangen
+
 u:(~Faktentürkei)
 ^enableThenGoto(FAKTENTÜRKEI)
+u:(~Faktendeutsch)
+^enableThenGoto(FAKTENDEUTSCH)
+u:(~Faktenitalienisch)
+^enableThenGoto(FAKTENITALIENISCH)
+u:(~Faktengriechisch)
+^enableThenGoto(FAKTENGRIECHISCH)
 
 
 proposal: %FAKTENTÜRKEI
-^rand
-"Die Türkische Küche stinkt"
-"Die Türkische Küche stinkt"
-"Die Türkische Küche stinkt"
-Willst du noch einen Fakt über die Türkische Küche ? #Peppers antwort bzw. Frage um weiter zu führen
+^rand[
+" In vielen Ländern der Welt hat man es als Vegetarier oder gar Veganer nicht gerade einfach. In der Türkei leben jedoch vergleichsweise viele von ihnen und die Küche ist geradezu wie gemacht für diesen Lebensstil. Frisches Gemüse sowie Rezepte für Suppe und Salat gehören kulinarisch betrachtet zum Standard"
+" Die Türken sind bekannt dafür während des Kochens zahlreiche tolle Gewürze zu verwenden. Von einer so gigantischen Anzahl können wir Deutschen wohl nur träumen"
+"Neben allerlei Gemüsesorten findet man insbesondere Fleisch und Reis vor. Statt Schwein und Rind, gibt es zumeist Lamm, Ziege und Hühnchen"
+"Vor der richtigen Mahlzeit sind vor allem Vorspeisen besonders beliebt. Frisches und selbstgemachtes Brot gehört genauso zur Tagesordnung wie Ayran"
+]
+Willst du noch einen Fakt über die Türkische Küche ?
 u1:(~Ja)
 ^sameProposal
 u1:(~Nein)
 Okay, wähle gerne auf meinem Display eines der Länder aus um zu den Rezepten zu gelangen
 
+proposal: %FAKTENDEUTSCH
+^rand
+"Die deutsche Küche ist gekennzeichnet durch starke regionale Unterschiede und an den Außengrenzen historisch bedingt geprägt durch die Einflüsse der Küche der Nachbarländer"
+"Gemüse wird häufig in Eintopfgerichten verzehrt und als Beilage serviert. Das Gemüse, das hierbei mit Abstand am häufigsten verwendet wird, sind Kartoffeln"
+"In Restaurants in Deutschland sind – anders als in Großbritannien oder Italien – die Beilagen in der Regel im Gesamtpreis eines Essens enthalten"
+"Die Basis des Würzens in der Deutschen Küche bildet Speisesalz, das traditionell aus Solequellen und Salzbergwerken gewonnen wird"
+
+Willst du noch einen Fakt über die Deutsche Küche ?
+u1:(~Ja)
+^sameProposal
+u1:(~Nein)
+Okay, wähle gerne auf meinem Display eines der Länder aus um zu den Rezepten zu gelangen
+
+proposal: %FAKTENITALIENISCH
+^rand[
+"Woher stammt eigentlich das Wort „Bolognese“? Das Rezept stammt ursprünglich aus dem norditalienischen Bologna und wird erst seit dem 19. Jahrhundert zu Nudeln gereicht"
+"Es gibt über 400 verschiedene Nudelsorten"
+"In Italien gibt es 16 Olivenölanbaugebiete. Die Bekanntesten sind Sardinien, Sizilien und die Toskana"
+"Die italienische Küche ist für zahlreiche Gerichte aus nur wenigen Bestandteilen bekannt. Die besten Rezepte stammen meist von Großmüttern und nicht von professionellen Köchen. Diese Familienrezepte bestechen vor allem durch ihre Bodenständigkeit"
+]
+Willst du noch einen Fakt über die Italienische Küche ?
+u1:(~Ja)
+^sameProposal
+u1:(~Nein)
+Okay, wähle gerne auf meinem Display eines der Länder aus um zu den Rezepten zu gelangen
+
+proposal: %FAKTENGRIECHISCH
+^rand[
+"Die griechische Küche ist geprägt von den geographischen Gegebenheiten Griechenlands und von Einflüssen von außen. Als insel- und damit auch küstenreiches Land spielen Fisch und Meeresfrüchte eine große Rolle"
+"Bereits im Antiken Griechenland findet man Elemente, welche die griechische Küche auch heute noch prägen viel Gemüse und Fisch und vor allem Zubereitungsarten, bei denen die Grundprodukte im Vordergrund stehen und bei denen besonders opulente Zubereitungen oder Würzungen eher verpönt sind"
+"Die typisch griechische Küche bevorzugt Hauptgerichte, die im Backofen zubereitet werden und entweder dort warm gehalten oder ohnehin nur lauwarm verzehrt werden"
+"Durch die Übernahme griechischer Territorien durch das Osmanische Reich gelangten viele Gerichte in den Orient, beispielsweise die Pita oder das Hackfleisch"
+]
+Willst du noch einen Fakt über die Griechische Küche ? #Peppers antwort bzw. Frage um weiter zu führen
+u1:(~Ja)
+^sameProposal
+u1:(~Nein)
+Okay, wähle gerne auf meinem Display eines der Länder aus um zu den Rezepten zu gelangen
+
+
 proposal: %Fakt
 ^rand[ # gibt Random einen Fakt der untenstehenden aus
-"Die Türkische Küche stinkt"
-"Die Türkische Küche stinkt"
-"Die Türkische Küche stinkt"
-"Die Türkische Küche stinkt"
+"Die Türken sind bekannt dafür während des Kochens zahlreiche tolle Gewürze zu verwenden. Von einer so gigantischen Anzahl können wir Deutschen wohl nur träumen"
+"In der deutschen Küche wird Gemüse häufig in Eintopfgerichten verzehrt und als Beilage serviert. Das Gemüse, das hierbei mit Abstand am häufigsten verwendet wird, sind Kartoffeln"
+"Die typisch griechische Küche bevorzugt Hauptgerichte, die im Backofen zubereitet werden und entweder dort warm gehalten oder ohnehin nur lauwarm verzehrt werden"
+"Bereits im Antiken Griechenland findet man Elemente, welche die griechische Küche auch heute noch prägen viel Gemüse und Fisch und vor allem Zubereitungsarten, bei denen die Grundprodukte im Vordergrund stehen und bei denen besonders opulente Zubereitungen oder Würzungen eher verpönt sind"
+"Durch die Übernahme griechischer Territorien durch das Osmanische Reich gelangten viele Gerichte in den Orient, beispielsweise die Pita oder das Hackfleisch"
+"In Italien gibt es 16 Olivenölanbaugebiete. Die Bekanntesten sind Sardinien, Sizilien und die Toskana"
+"Es gibt in Italien über 400 verschiedene Nudelsorten"
+"Woher stammt eigentlich das Wort „Bolognese“? Das Rezept stammt ursprünglich aus dem norditalienischen Bologna und wird erst seit dem 19. Jahrhundert zu Nudeln gereicht"
+"Die Basis des Würzens in der Deutschen Küche bildet Speisesalz, das traditionell aus Solequellen und Salzbergwerken gewonnen wird"
+"In Restaurants in Deutschland sind – anders als in Großbritannien oder Italien – die Beilagen in der Regel im Gesamtpreis eines Essens enthalten"
+"Gemüse wird häufig in Eintopfgerichten verzehrt und als Beilage serviert. Das Gemüse, das hierbei mit Abstand am häufigsten verwendet wird, sind Kartoffeln"
+"Die deutsche Küche ist gekennzeichnet durch starke regionale Unterschiede und an den Außengrenzen historisch bedingt geprägt durch die Einflüsse der Küche der Nachbarländer"
+"Neben allerlei Gemüsesorten findet man in der Türkischen Küche insbesondere Fleisch und Reis vor. Statt Schwein und Rind, gibt es zumeist Lamm, Ziege und Hühnchen"
+"Vor der richtigen Mahlzeit sind vor allem Vorspeisen in der Türkei besonders beliebt. Frisches und selbstgemachtes Brot gehört genauso zur Tagesordnung wie Ayran"
+"Die italienische Küche ist für zahlreiche Gerichte aus nur wenigen Bestandteilen bekannt. Die besten Rezepte stammen meist von Großmüttern und nicht von professionellen Köchen. Diese Familienrezepte bestechen vor allem durch ihre Bodenständigkeit"
+"Die griechische Küche ist geprägt von den geographischen Gegebenheiten Griechenlands und von Einflüssen von außen. Als insel- und damit auch küstenreiches Land spielen Fisch und Meeresfrüchte eine große Rolle"
 ]
-
+Willst du noch einen zufälligen Fakt zu der Küche eines der Länder?
+u1:(~Ja)
+^sameProposal
+u1:(~Nein)
+Okay, wähle gerne auf meinem Display eines der Länder aus um zu den Rezepten zu gelangen

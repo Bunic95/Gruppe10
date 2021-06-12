@@ -27,7 +27,7 @@ class RezeptActivity : RobotActivity(), RobotLifecycleCallbacks {
     override fun onRobotFocusGained(qiContext: QiContext?) {
         //Text den Pepper beim start dieser Activity sagt.
         val say = SayBuilder.with(qiContext)
-            .withText("Du scheinst Hunger zu haben? Hier findest du Rezepte unterschiedlicher Länder, klicke auf eines oder lasse dir ein zufälliges Rezept geben.")
+            .withText("Du scheinst Hunger zu haben? Hier findest du Rezepte unterschiedlicher Länder, klicke auf eines oder lasse dir ein zufälliges Rezept geben. Ansonsten frag mich zu einem der Themen die unten Links zu sehen sind.")
             .build()
         say.run() //Say function ausführen
         //Festlegen der Sprache des Roboters//

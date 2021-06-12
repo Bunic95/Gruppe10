@@ -8,6 +8,7 @@ import android.widget.Toast
 import com.aldebaran.qi.sdk.QiContext
 import com.aldebaran.qi.sdk.QiSDK
 import com.aldebaran.qi.sdk.RobotLifecycleCallbacks
+import com.aldebaran.qi.sdk.builder.SayBuilder
 import com.aldebaran.qi.sdk.design.activity.RobotActivity
 
 class BaklavaActivity : RobotActivity(), RobotLifecycleCallbacks {
@@ -34,7 +35,12 @@ class BaklavaActivity : RobotActivity(), RobotLifecycleCallbacks {
     }
 
     override fun onRobotFocusGained(qiContext: QiContext?) {
-        TODO("Not yet implemented")
+        //Roboter etwas sagen lassen am Anfang
+        val say = SayBuilder.with(qiContext)
+            .withText("Baklava also? Gute Wahl! Viel Spaß beim kochen. Solltest du etwas anderes von mir wollen Navigiere über meinen Bildschirm zurück oder über den Homebutton an den Anfang") //Text den Pepper beim start sagt.
+            .build()
+        say.run() //Say function ausführen
+
     }
 
     override fun onRobotFocusLost() {

@@ -2,18 +2,24 @@ topic: ~smalltalk1()
 concept:(Zungenbrecher) [Zungenbrecher "sag mir einen Zungenbrecher" Brecher]
 concept:(Witz) [Witz Witze "erzähl mir einen Witz"]
 concept:(Fußball) [Fußballfakt Fussballfakt Fakt "erzähle mir einen Fußballfakt" "Fußball ist toll"]
-concept:(Auswahl) [ Wecker  Rezept Rezepte Notiz Notizen "erstelle mir eine Notiz" Wetter "wie wird das Wetter heute?" "stelle mir den Wecker" "zeige mir rezepte"]
+concept:(Auswahl) [ Organizer organizer Wecker  Rezept Rezepte Notiz Notizen "erstelle mir eine Notiz" Wetter "wie wird das Wetter heute?" "stelle mir den Wecker" "zeige mir rezepte"]
 concept:(Nein) [nö ne nein niet "nein danke" "ein andermal" "später vielleicht" "lass mal"]
 concept:(Ja) [ja jap jo si "si senior" "ja gerne" "ja bitte" "hau raus"]
-concept:(time) [Zeit Uhrzeit "welche Zeit ist gerade" "wieviel Uhr ist es"]
-concept:(date) [Datum Tag "welchen tag haben wir heute" "welches Datum ist heute"]
+concept:(time) [Zeit Uhrzeit Uhr spät "welche zeit ist gerade" "wieviel uhr ist es" "wie spät ist es"]
+concept:(date) [Datum Tag datum "welchen tag haben wir heute" "welches Datum ist heute"]
 
 u:(~Auswahl)
-Drücke hierzu einfach auf den Knopf der jeweiligen Funktion auf meinem Bildschirm
+Drücke hierzu einfach auf den Knopf der jeweiligen Funktion auf meinem Bildschirm!
 u:(~Zungenbrecher)
 ^enableThenGoto(ZUNGENBRECHER)
+u:(~time)
+^enableThenGoto(TIME)
+u:(~date)
+^enableThenGoto(DATE)
+
+
 proposal: %NEXT
-Wähle gerne per Knopfdruck eine Funktion auf meinem Display oder Frage mich erneut nach einem Witz Zungenbrecher oder Fußballfakt!
+Wähle gerne per Knopfdruck eine Funktion auf meinem Display oder Frage mich erneut nach einem Witz Zungenbrecher Fußballfakt oder dem Datum beziehungsweise der Uhrzeit!
 u:(~Zungenbrecher)^enableThenGoto(ZUNGENBRECHER)
 u:(~Witz)^enableThenGoto(WITZ)
 u:(~Fußball)^enableThenGoto(FUßBALL)
@@ -43,7 +49,7 @@ Okay halt dich fest!
     "Kürzester Witz aller Zeiten... Brennholzverleih"
     "Wie nennt man auf Chinesisch Oberschenkelbeinbruch? Knicki-Knacki Nah-Bei-Sacki."
     ]
-    #Hier lachen execute einfügen
+    ^execute(nicereaction)
     Möchtest du noch einen Witz hören?
     u1:(~Ja)
     ^sameProposal
@@ -67,13 +73,11 @@ proposal: %FUßBALL
     ^sameProposal
     u1:(~Nein) ^enableThenGoto(NEXT)
 
-    u1:(~time) ^enableThenGoto(TIME)
-    u1:(~date) ^enableThenGoto(DATE)
-
-#Uhrzeit geht noch nciht. noch anpassen
     proposal:%TIME
-    u1:(~time) Es ist ^currentTime .
+    u1:(~time) Es ist ^currentTime Uhr .
+    ^enableThenGoto(NEXT)
 
     proposal:%DATE
     u1:(~date) Heute ist der ^currentDate .
+    ^enableThenGoto(NEXT)
 

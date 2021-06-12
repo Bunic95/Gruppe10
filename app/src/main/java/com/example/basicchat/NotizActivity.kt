@@ -8,6 +8,7 @@ import android.widget.*
 import com.aldebaran.qi.sdk.QiContext
 import com.aldebaran.qi.sdk.QiSDK
 import com.aldebaran.qi.sdk.RobotLifecycleCallbacks
+import com.aldebaran.qi.sdk.builder.SayBuilder
 import com.aldebaran.qi.sdk.design.activity.RobotActivity
 
 class NotizActivity : RobotActivity(), RobotLifecycleCallbacks {
@@ -62,7 +63,12 @@ class NotizActivity : RobotActivity(), RobotLifecycleCallbacks {
     }
 
     override fun onRobotFocusGained(qiContext: QiContext?) {
-        TODO("Not yet implemented")
+        //Roboter etwas sagen lassen am Anfang
+        val say = SayBuilder.with(qiContext)
+            .withText("Erstelle Notizen über die angezeigte Tastatur. Schließe diese mit dem Pfeil unten Links. Durch den Speichern Knopf wird die Notiz überschrieben.") //Text den Pepper beim start sagt.
+            .build()
+        say.run() //Say function ausführen
+
     }
 
     override fun onRobotFocusLost() {

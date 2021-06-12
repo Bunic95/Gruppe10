@@ -74,8 +74,8 @@
         android:id="@+id/imageView5"
         android:layout_width="175dp"
         android:layout_height="173dp"
+        android:layout_marginTop="40dp"
         android:contentDescription="@string/notizicon"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/but_notizen1"
         app:layout_constraintStart_toStartOf="@+id/but_notizen1"
         app:layout_constraintTop_toBottomOf="@+id/but_notizen1"
@@ -98,8 +98,8 @@
         android:id="@+id/imageView6"
         android:layout_width="172dp"
         android:layout_height="165dp"
+        android:layout_marginTop="40dp"
         android:contentDescription="@string/weckericon"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/but_wecker1"
         app:layout_constraintStart_toStartOf="@+id/but_wecker1"
         app:layout_constraintTop_toBottomOf="@+id/but_wecker1"
@@ -114,5 +114,70 @@
         app:layout_constraintEnd_toStartOf="@+id/but_back_organizer"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_baseline_home_24" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="100dp"
+        android:fontFamily="@font/aldrich"
+        android:text="Frage mich nach:"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/aldrich"
+        android:text="Schlaftipps"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/aldrich"
+        android:text="Lockerungsübung"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/aldrich"
+        android:text="Zitate zum Nachdenken"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/aldrich"
+        android:text="Uhrzeit oder Datum"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

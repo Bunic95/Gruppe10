@@ -10,6 +10,7 @@ import android.widget.Toast
 import com.aldebaran.qi.sdk.QiContext
 import com.aldebaran.qi.sdk.QiSDK
 import com.aldebaran.qi.sdk.RobotLifecycleCallbacks
+import com.aldebaran.qi.sdk.builder.SayBuilder
 import com.aldebaran.qi.sdk.design.activity.RobotActivity
 import java.text.SimpleDateFormat
 import java.util.*
@@ -57,6 +58,11 @@ class WeckerActivity : RobotActivity(), RobotLifecycleCallbacks {
     }
 
     override fun onRobotFocusGained(qiContext: QiContext?) {
+        //Roboter etwas sagen lassen am Anfang
+        val say = SayBuilder.with(qiContext)
+            .withText("Du befindest dich nun im Wecker Menü, klicke auf Wecker verwalten um dir einen Wecker zu erstellen!") //Text den Pepper beim start sagt.
+            .build()
+        say.run() //Say function ausführen
 
     }
 

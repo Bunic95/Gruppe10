@@ -8,6 +8,7 @@ import android.widget.Toast
 import com.aldebaran.qi.sdk.QiContext
 import com.aldebaran.qi.sdk.QiSDK
 import com.aldebaran.qi.sdk.RobotLifecycleCallbacks
+import com.aldebaran.qi.sdk.builder.SayBuilder
 import com.aldebaran.qi.sdk.design.activity.RobotActivity
 
 class griechischactivity : RobotActivity(), RobotLifecycleCallbacks {
@@ -46,7 +47,12 @@ class griechischactivity : RobotActivity(), RobotLifecycleCallbacks {
     }
 
     override fun onRobotFocusGained(qiContext: QiContext?) {
-        TODO("Not yet implemented")
+        //Roboter etwas sagen lassen am Anfang
+        val say = SayBuilder.with(qiContext)
+            .withText("Hier kannst du zwischen einem Khitharki Salat und Gyros wählen. Klicke dazu auf das Rezept deiner Wahl, oder Navigiere weiter zurück!") //Text den Pepper beim start sagt.
+            .build()
+        say.run() //Say function ausführen
+
     }
 
     override fun onRobotFocusLost() {

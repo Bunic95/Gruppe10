@@ -1,9 +1,76 @@
 topic: ~organizertalk()
 # Defining extra concepts out of words or group of words
-concept:(hello) [hello hi hey "good morning" greetings]
+concept:(Schlaftipp) [Schlaftipp "sag mir einen Schlaftipp" Schlaf Schlafen "ich möchte einen schlaftipp"]
+concept:(Zitate) [Zitat "Zitat zum nachdenken" "erzähl mir ein Zitat" Zitate]
+concept:(Lockerungsübung) ["zeige mir eine Lockerungsübung" Dehnünumg Lockerungsübung lockerung übung tanz gymnastik yoga]
+concept:(Auswahl) [ Wecker Notiz Notizen "erstelle mir eine Notiz"  "stelle mir den Wecker"]
+concept:(Nein) [nö ne nein niet "nein danke" "ein andermal" "später vielleicht" "lass mal"]
+concept:(Ja) [ja jap jo si "si senior" "ja gerne" "ja bitte" "hau raus"]
+concept:(time) [Zeit uhrzeit "Uhr zeit" "welche Zeit ist gerade" "wieviel Uhr ist es"]
+concept:(date) [Datum Tag "welchen tag haben wir heute" "welches Datum ist heute"]
 
-# Replying to speech
-u:(~hello) ~hello
+u:(~Auswahl)
+Drücke hierzu einfach auf den Knopf der jeweiligen Funktion auf meinem Bildschirm
+u:(~Schlaftipp)
+^enableThenGoto(SCHLAFTIPP)
+u:(~Zitate)
+^enableThenGoto(ZITATE)
+u:(~Lockerungsübung)
+^enableThenGoto(LOCKERUNGSUEBUNG)
+u:(~time)
+^enableThenGoto(TIME)
+u:(~date)
+^enableThenGoto(DATE)
 
-#HIER GESPRÄCHE EINFÜGEN DIE VOR BEGIN DER WECKER UND NOTIZEN FUNKTIONEN STATTFINDEN KÖNNEN
-#BPW. PEPPER ERKLÄRT WAS PERSONA HIER MACHEN KANN UND RANDOM TALK (EVTL SCHLAFTIPPS ODER RÄTSEL ETC.) UND BEWEGUNGEN (TANZEN ODER SOWAS)
+
+proposal: %NEXT
+Wähle gerne per Knopfdruck eine Funktion auf meinem Display oder Frage mich erneut nach einem Zitat einem Schlaftipp oder einer Lockerungsübung!
+u:(~Schlaftipp)^enableThenGoto(SCHLAFTIPP)
+u:(~Zitate)^enableThenGoto(ZITATE)
+
+
+proposal: %SCHLAFTIPP
+^rand[
+    "Empfehlenswert ist beispielsweise ein kurzer Spaziergang am Abend, an dem man die Gedanken bewusst ein wenig baumeln lässt. Intensiver Sport zu später Stunde ist hingegen kontraproduktiv."
+    "Ein warmes Vollbad wirkt beruhigend auf die Nerven und hilft gegen Schlaflosigkeit. Wer noch Lindenblüten-, Melisse-, Baldrian- oder Hopfen-Extrakte ins Badewasser gibt, erleichtert den Weg ins Land der Träume noch einmal mehr"
+    "Wer öfters mit Schlafproblemen zu kämpfen hat, sollte darüber nachdenken, Computer, Fernseher und vor allem Smartphone aus dem Schlafzimmer zu verbannen."
+    "Wer nicht einschlafen kann und sich ununterbrochen nur mit dem Gedanken quält, dass er jetzt endlich einschlafen müsse, weil er ja morgen unbedingt ausgeschlafen sein müsse, der wird wohl tendenziell hellwach bleiben. Zwinge dich nicht einzuschlafen!"
+    "Mitunter fördert auch das richtige Essen die Fähigkeit, gut einzuschlafen. Auf schwer verdauliche Speisen insbesondere fettes Essen sowie blähende Nahrungsmittel unter anderem auf Hülsenfrüchte, Kraut, frisches Brot und harte Eier sollte man besser verzichten."
+    "Starke Gerüche wie etwa Parfüms oder intensiv riechende Cremes können ebenfalls Schlafprobleme fördern. Auch stark riechende Blumen sind in diesem Zusammenhang im Schlafzimmer eher unangebracht. Zimmerpflanzen dürfen indes sein, vor allem solche, die nachts Kohlendioxid aufnehmen."
+    ]
+    #schlafen animation einfügen
+    Möchtest du noch einen Schlaftipp hören?
+    u1:(~Ja)
+    ^sameProposal
+    u1:(~Nein) ^enableThenGoto(NEXT)
+
+proposal: %ZITATE
+Okay los gehts !
+^rand[
+    "Es ist ein großer Fehler zu denken, dass ein Mensch immer gleich ist. Ein Mensch ist nie lange derselbe. Er verändert sich ständig. Nicht einmal für eine halbe Stunde bleibt er derselbe. Von G.I. Gurdjieff"
+    "Freundschaft ist die reinste und höchste Form der Liebe. Es ist eine Form der Liebe ohne Bedingungen und Erwartungen, bei der man das Geben an sich genießt. Dieses Zitat ist von Osho"
+    "Zeit ist überhaupt nicht kostbar, denn sie ist eine Illusion. Was dir so kostbar erscheint, ist nicht die Zeit, sondern der einzige Punkt, der außerhalb der Zeit liegt, das Jetzt. Das allerdings ist kostbar. Je mehr du dich auf die Zeit konzentrierst, auf Vergangenheit und Zukunft, desto mehr verpasst du das Jetzt, das Kostbarste, was es gibt. Dieses Zitat ist von Eckhart Tolle"
+    "Dumme Gedanken hat jeder, aber der Weise verschweigt sie. Von Wilhelm Busch"
+    "Du kannst dich nicht selber finden, indem du in die Vergangenheit gehst. Du findest dich selber, indem du in die Gegenwart kommst. Von Eckhart Tolle"
+    "Phantasie ist wichtiger als Wissen, denn Wissen ist begrenzt. Dies sagte Albert Einstein"
+    ]
+    ^execute(thinkingreaction)
+    Möchtest du noch ein Zitat hören?
+    u1:(~Ja)
+    ^sameProposal
+    u1:(~Nein) ^enableThenGoto(NEXT)
+
+proposal: %LOCKERUNGSUEBUNG
+Okay machs mir nach 3 2 1 !
+    ^execute(discoreaction)
+    ^execute(dancereaction)
+    Möchtest du die Lockerungsübung noch einmal machen?
+    u1:(~Ja)
+    ^sameProposal
+    u1:(~Nein) ^enableThenGoto(NEXT)
+
+    proposal:%TIME
+    u1:(~time) Es ist ^currentTime Uhr .
+
+    proposal:%DATE
+    u1:(~date) Heute ist der ^currentDate .

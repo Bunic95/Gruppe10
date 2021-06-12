@@ -15,3 +15,63 @@ fun raiseLeftHand(qiContext: QiContext) {
         .build()                                            // Build the animate action.
     helloAnimate.run()
 }
+fun nicereaction(qiContext: QiContext) {
+    val niceAnim: com.aldebaran.qi.sdk.`object`.actuation.Animation? =
+        AnimationBuilder.with(qiContext) // Create the builder with the context.
+            .withResources(R.raw.nicereaction_a002)                    // Set the animation resource.
+            .build()                                            // Build the animation.
+    // Create an animate action.
+    val niceAnimate: Animate =
+        AnimateBuilder.with(qiContext)  // Create the builder with the context.
+            .withAnimation(niceAnim)                           // Set the animation.
+            .build()                                            // Build the animate action.
+    niceAnimate.run()
+}
+fun thinkingreaction(qiContext: QiContext) {
+    val thinkAnim: com.aldebaran.qi.sdk.`object`.actuation.Animation? =
+        AnimationBuilder.with(qiContext) // Create the builder with the context.
+            .withResources(R.raw.thinking_a001)                    // Set the animation resource.
+            .build()                                            // Build the animation.
+    // Create an animate action.
+    val thinkAnimate: Animate =
+        AnimateBuilder.with(qiContext)  // Create the builder with the context.
+            .withAnimation(thinkAnim)                           // Set the animation.
+            .build()                                            // Build the animate action.
+    thinkAnimate.run()
+}
+fun discoreaction(qiContext: QiContext) {
+    val discoAnim: com.aldebaran.qi.sdk.`object`.actuation.Animation? =
+        AnimationBuilder.with(qiContext) // Create the builder with the context.
+            .withResources(R.raw.disco_a001)                    // Set the animation resource.
+            .build()                                            // Build the animation.
+    // Create an animate action.
+    val discoAnimate: Animate =
+        AnimateBuilder.with(qiContext)  // Create the builder with the context.
+            .withAnimation(discoAnim)                           // Set the animation.
+            .build()                                            // Build the animate action.
+    discoAnimate.run()
+}
+fun taichireaction(qiContext: QiContext) {
+    val taichiAnim: com.aldebaran.qi.sdk.`object`.actuation.Animation? =
+        AnimationBuilder.with(qiContext) // Create the builder with the context.
+            .withResources(R.raw.taichichuan_a001)                    // Set the animation resource.
+            .build()                                            // Build the animation.
+    // Create an animate action.
+    val taichiAnimate: Animate =
+        AnimateBuilder.with(qiContext)  // Create the builder with the context.
+            .withAnimation(taichiAnim)                           // Set the animation.
+            .build()                                            // Build the animate action.
+    taichiAnimate.run()
+}
+fun dancereaction(qiContext: QiContext) {
+    val danceAnim: com.aldebaran.qi.sdk.`object`.actuation.Animation? =
+        AnimationBuilder.with(qiContext) // Create the builder with the context.
+            .withResources(R.raw.dance_b005)                    // Set the animation resource.
+            .build()                                            // Build the animation.
+    // Create an animate action.
+    val danceAnimate: Animate =
+        AnimateBuilder.with(qiContext)  // Create the builder with the context.
+            .withAnimation(danceAnim)                           // Set the animation.
+            .build()                                            // Build the animate action.
+    danceAnimate.run()
+}

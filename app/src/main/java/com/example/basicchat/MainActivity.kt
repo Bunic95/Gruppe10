@@ -25,7 +25,6 @@ class MainActivity : RobotActivity(), RobotLifecycleCallbacks { // robotactivity
         setContentView(R.layout.speechscreen) // setContentView zeigt das layout "speechscreen)
         QiSDK.register(this, this)
     }
-
     override fun onRobotFocusGained(qiContext: QiContext) {
         //Roboter etwas sagen lassen am Anfang
         val say = SayBuilder.with(qiContext)
