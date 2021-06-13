@@ -44,7 +44,8 @@ class MainActivity : RobotActivity(), RobotLifecycleCallbacks { // robotactivity
             }
         }
         val executors = hashMapOf( // erstellen der variable executors um Animation einzubinden in chattopic
-                "raiseLeftHand" to HelloHumanExecutor(qiContext) //, komma muss hin wenn man mehrere Animationen einbinden will
+                "raiseLeftHand" to HelloHumanExecutor(qiContext),
+            "sadreaction" to SadExecutor(qiContext)//, komma muss hin wenn man mehrere Animationen einbinden will
         )
         qiChatbot.executors = executors as Map<String, QiChatExecutor>?
 //Chat erstellen

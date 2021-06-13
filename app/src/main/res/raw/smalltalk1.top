@@ -7,6 +7,7 @@ concept:(Nein) [nö ne nein niet "nein danke" "ein andermal" "später vielleicht
 concept:(Ja) [ja jap jo si "si senior" "ja gerne" "ja bitte" "hau raus"]
 concept:(time) [Zeit Uhrzeit Uhr spät "welche zeit ist gerade" "wieviel uhr ist es" "wie spät ist es"]
 concept:(date) [Datum Tag datum "welchen tag haben wir heute" "welches Datum ist heute"]
+concept:(adios) [ciao tschüss "auf wiedersehen" "machs gut" bye "see you later alligator"]
 
 u:(~Auswahl)
 Drücke hierzu einfach auf den Knopf der jeweiligen Funktion auf meinem Bildschirm!
@@ -16,6 +17,9 @@ u:(~time)
 ^enableThenGoto(TIME)
 u:(~date)
 ^enableThenGoto(DATE)
+u:(~adios)
+Ich hoffe ich konnte dir Helfen. Machs gut Mensch und pass auf dich auf!
+^execute(raiseLeftHand)
 
 
 proposal: %NEXT

@@ -12,6 +12,7 @@ u:(~Hallo)
     Das freut mich! Mir geht es Super. Wenn du möchtest kannst du nun meine Funktionen auf dem Display ausführen oder mich nach einem Witz Zungenbrecher oder Fußballfakt fragen
 ^endDiscuss(EndFirstDecision) #beendet Gesprächsverlauf und springt zur nächsten Aktivität
     u1:(~Schlecht)
+    ^execute(sadreaction)
     $speech = "Oh, das tut mir leid! Kann ich dir bei etwas helfen? Wenn du möchtest kannst du nun meine Funktionen auf dem Display ausführen oder mich nach einem Witz Zungenbrecher oder Fußballfakt fragen"
     Oh, das tut mir leid! Wenn du möchtest kannst du nun meine Funktionen auf dem Display ausführen oder mich nach einem Witz Zungenbrecher oder Fußballfakt fragen
 ^endDiscuss(EndFirstDecision)

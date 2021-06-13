@@ -34,7 +34,9 @@ class DecisionActivity : RobotActivity(), RobotLifecycleCallbacks {
         //Chat erstellen
         val chat = ChatBuilder.with(qiContext).withChatbot(qiChatbot).withLocale(locale).build()
         val executors = hashMapOf( // erstellen der variable executors um Animation einzubinden in chattopic
-            "nicereaction" to NiceExecutor(qiContext) //, komma muss hin wenn man mehrere Animationen einbinden will
+            "nicereaction" to NiceExecutor(qiContext),
+            "sadreaction" to SadExecutor(qiContext),
+            "raiseLeftHand" to HelloHumanExecutor(qiContext)//, komma muss hin wenn man mehrere Animationen einbinden will
         )
         qiChatbot.executors = executors as Map<String, QiChatExecutor>?
         // Ausführen des Chats

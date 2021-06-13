@@ -75,3 +75,15 @@ fun dancereaction(qiContext: QiContext) {
             .build()                                            // Build the animate action.
     danceAnimate.run()
 }
+fun sadreaction(qiContext: QiContext) {
+    val sadAnim: com.aldebaran.qi.sdk.`object`.actuation.Animation? =
+        AnimationBuilder.with(qiContext) // Create the builder with the context.
+            .withResources(R.raw.sad_a001)                    // Set the animation resource.
+            .build()                                            // Build the animation.
+    // Create an animate action.
+    val sadAnimate: Animate =
+        AnimateBuilder.with(qiContext)  // Create the builder with the context.
+            .withAnimation(sadAnim)                           // Set the animation.
+            .build()                                            // Build the animate action.
+    sadAnimate.run()
+}

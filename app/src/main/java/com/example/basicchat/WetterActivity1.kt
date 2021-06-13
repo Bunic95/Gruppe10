@@ -1,11 +1,10 @@
 package com.example.basicchat
 
+import android.content.Intent
 import android.os.AsyncTask
 import android.os.Bundle
 import android.view.View
-import android.widget.ProgressBar
-import android.widget.RelativeLayout
-import android.widget.TextView
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import org.json.JSONObject
 import java.net.URL
@@ -23,7 +22,16 @@ class WetterActivitytest : AppCompatActivity() {
 
         weatherTask().execute()
 
+        //Button zurück in den Homescreen
+        val but_home = findViewById<ImageButton>(R.id.but_home18)
+        but_home.setOnClickListener {
+            val intent = Intent(this, DecisionActivity::class.java)
+            startActivity(intent)
+            Toast.makeText(this, "Zurück zum Anfang", Toast.LENGTH_SHORT).show()
+        }
+
     }
+
 
     inner class weatherTask() : AsyncTask<String, Void, String>() {
         override fun onPreExecute() {
